@@ -19,7 +19,7 @@ comparisons:
 # list of chromosomes to be analyzed
 chromosomes: Chromosome1, Chromosome2, Chromosome3, AnotherChromosome
 
-# paramters for CNV/window size calculations (defaults are shown)
+# parameters for CNV/window size calculations (defaults are shown)
 parameters:
   annotate: TRUE
   bed_file: FALSE
