@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to copy-number-analysis’s documentation! &mdash; copy-number-analysis 1.0 documentation</title>
+  <title>PBGL CNV-seq Analysis &mdash; copy-number-analysis 1.0 documentation</title>
   
 
   
@@ -16,10 +16,7 @@
 
   
   
-
   
-  
-
   
 
   
@@ -32,6 +29,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -51,7 +49,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> copy-number-analysis
+            <a href="#" class="icon icon-home" alt="Documentation Home"> copy-number-analysis
           
 
           
@@ -84,8 +82,24 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Welcome to copy-number-analysis’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#">PBGL CNV-seq Analysis</a><ul>
+<li><a class="reference internal" href="#background">Background</a></li>
+<li><a class="reference internal" href="#installations">Installations</a><ul>
+<li><a class="reference internal" href="#miniconda3-conda">Miniconda3 (conda)</a></li>
+<li><a class="reference internal" href="#git-with-conda">Git with conda</a></li>
+<li><a class="reference internal" href="#required-libraries-with-conda">Required Libraries with conda</a><ul>
+<li><a class="reference internal" href="#automatically-slower">Automatically (slower)</a></li>
+<li><a class="reference internal" href="#manually-faster">Manually (faster)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#running-a-jupyter-notebook">Running a Jupyter Notebook</a></li>
+<li><a class="reference internal" href="#editing-the-configuration-file">Editing the Configuration File</a></li>
+<li><a class="reference internal" href="#running-the-rcnv-seq-template-jupyter-notebook">Running the RCNV_seq-template Jupyter Notebook</a></li>
+<li><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
 </ul>
 </div>
             
@@ -126,20 +140,18 @@
 
 
 
-
-
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Welcome to copy-number-analysis’s documentation!</li>
+      <li>PBGL CNV-seq Analysis</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-          
+            
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -153,18 +165,267 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-copy-number-analysis-s-documentation">
-<h1>Welcome to copy-number-analysis’s documentation!<a class="headerlink" href="#welcome-to-copy-number-analysis-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="pbgl-cnv-seq-analysis">
+<h1>PBGL CNV-seq Analysis</h1>
 <div class="toctree-wrapper compound">
 </div>
+<div class="section" id="background">
+<h2>Background</h2>
+<p><strong>[DRAFT]</strong></p>
+<p>Copy number variation (CNV) analysis using CNV-seq, R, Jupyter Notebooks, Miniconda3, and Git.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views expressed do not necessarily reflect those of the International Atomic Energy Agency or its Member States and remain the responsibility of the contributors. The use of particular designations of countries or territories does not imply any judgement by the publisher, the IAEA, as to the legal status of such countries or territories, of their authorities and institutions or of the delimitation of their boundaries. The mention of names of specific companies or products (whether or not indicated as registered) does not imply any intention to infringe proprietary rights, nor should it be construed as an endorsement or recommendation on the part of the IAEA.</p>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</div>
+<div class="section" id="installations">
+<h2>Installations</h2>
+<p>Before installing any necessary software, it is recommended to check if the computer is running 32-bit or 64-bit. Run the following to verify the system:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ uname -m
+</pre></div>
+</div>
+<div class="section" id="miniconda3-conda">
+<h3>Miniconda3 (conda)</h3>
+<p>Download the Miniconda3, or simply “conda”, installer:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html#linux-installers">Miniconda3 installer for Linux</a></p></li>
 </ul>
+</div></blockquote>
+<p>Run the downloaded installer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash Miniconda3-latest-Linux-x86_64.sh
+</pre></div>
+</div>
+<p>Open a new terminal window for conda to take effect. Verify the installation in new terminal window with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda list
+</pre></div>
+</div>
+</div>
+<div class="section" id="git-with-conda">
+<h3>Git with conda</h3>
+<p>Git will be installed first to clone locally (download a copy to your local computer) the CNV-seq repository from GitHub. To do so, run the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c anaconda git
+</pre></div>
+</div>
+<p>After the installation, clone the CNV-seq repository to the local computer in the desired directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/amora197/copy-number-analysis.git
+</pre></div>
+</div>
+<p>Verify that the installation is complete by listing the files in the directory.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l
+</pre></div>
+</div>
+<p>A folder called <strong>copy-number-analysis</strong> should be listed in the directory.</p>
+</div>
+<div class="section" id="required-libraries-with-conda">
+<h3>Required Libraries with conda</h3>
+<p>CNV-seq has multiple dependencies, listed below:</p>
+<ul class="simple">
+<li><p>Git</p></li>
+<li><p>R</p>
+<ul>
+<li><p>configr</p></li>
+<li><p>ggplot2</p></li>
+<li><p>BiocManager</p></li>
+<li><p>Bioconductor-GenomicAlignments</p></li>
+</ul>
+</li>
+<li><p>Jupyter Notebook</p>
+<ul>
+<li><p>IRkernel</p></li>
+</ul>
+</li>
+</ul>
+<p>There are two ways to install the rest of the necessary libraries to run CNV-seq: automatically or manually. The former is slower, providing a long coffee break while the conda installations run. The latter proves a faster way to get the tool up-and-running.</p>
+<div class="section" id="automatically-slower">
+<h4>Automatically (slower)</h4>
+<p>Two YAML files, <strong>environment.yml</strong> and <strong>libraries.yml</strong>, are provided to automatically create a conda environment and install the dependent libraries. The former creates the conda environment, along R, Jupyter Notebook, and the R-kernel in Jupyter. The latter installs dependent R libraries. Run <strong>environment.yml</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda env create --file envs/environment.yml
+</pre></div>
+</div>
+<p>Once done, the created environment can be verified running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda env list
+</pre></div>
+</div>
+<p>Activate the created environment (<strong>cnv-seq</strong>) and run <strong>libraries.yml</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda activate cnv-seq
+$ conda env update --file envs/libraries.yml
+</pre></div>
+</div>
+<p>Once done, all the necessary packages should be installed. This can be verified with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda list
+</pre></div>
+</div>
+</div>
+<div class="section" id="manually-faster">
+<h4>Manually (faster)</h4>
+<p>To manually create and activate an environment, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create --name cnv-seq
+</pre></div>
+</div>
+<p>Activate the virtual environment with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda activate cnv-seq
+</pre></div>
+</div>
+<p>Start running the installations of the necessary libraries, paying attention to the prompts for each one:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge r-base=4.0
+$ conda install -c anaconda jupyter
+$ conda install -c r r-irkernel
+$ conda install -y -c conda-forge r-biocmanager
+$ conda install -y -c bioconda bioconductor-genomicalignments
+$ conda install -y -c pcgr r-configr
+$ conda install -y -c r r-ggplot2
+</pre></div>
+</div>
+<p>Once done, all the necessary packages should be installed. This can be verified with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda list
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="running-a-jupyter-notebook">
+<h2>Running a Jupyter Notebook</h2>
+<p>To access the Jupyter Notebooks, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter notebook
+</pre></div>
+</div>
+<p>This command will start a Jupyter Notebook session inside the directory the command is run. The user can navigate between directories, visualize files, and edit files in the browser by clicking on directories or files, respectively.</p>
+<p>Look for the directory <strong>copy-number-analysis</strong> and click on it. Click on <strong>jupyter-notebooks</strong> directory, which contains four directories and two Jupyter Notebooks. Here is a breakdown of each:</p>
+<ul class="simple">
+<li><p><cite>config</cite>:</p>
+<ul>
+<li><p>directory containing configuration files</p></li>
+</ul>
+</li>
+<li><p><cite>helper-functions</cite>:</p>
+<ul>
+<li><p>directory containing R scripts with functions to calculate and plot CNVs</p></li>
+</ul>
+</li>
+<li><p><cite>images</cite>:</p>
+<ul>
+<li><p>directory that will contain output CNV plots after running CNV-seq</p></li>
+</ul>
+</li>
+<li><p><cite>tab-files</cite>:</p>
+<ul>
+<li><p>directory that will contain two types of output tab-delimited files:</p>
+<ul>
+<li><p>hits used to calculate CNVs</p></li>
+<li><p>CNVs per chromosome per comparison</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>two Jupyter Notebooks:</p>
+<ul>
+<li><p>RCNV_seq-example.ipynb</p>
+<ul>
+<li><p>example analysis of sorghum</p></li>
+</ul>
+</li>
+<li><p>RCNV_seq-template.ipynb</p>
+<ul>
+<li><p>template for the user</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="editing-the-configuration-file">
+<h2>Editing the Configuration File</h2>
+<p>In order to run the CNV-seq Jupyter Notebook, the user needs to feed it with a configuration file (<strong>config-CNVseq.yml</strong>) that specifies the paths to the bam files, comparisons to be done, chromosomes to analyze, and parameter definitions for calculating and plotting CNVs.</p>
+<p>The configuration file <strong>config-CNVseq.yml</strong> can be found in the <strong>copy-number-analysis/jupyter-notebooks/config</strong> directory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The user needs to edit <strong>config-CNVseq.yml</strong> to point towards bam/bed files; specify comparisons and chromosomes to analyze; and define the parameters to calculate/plot CNVs.</p>
+</div>
+<p>Two example configuration files are provided (<strong>example1-config-CNVseq-coffee.yml</strong> and <strong>example2-config-CNVseq-sorghum.yml</strong>). The configuration file <strong>config-CNVseq.yml</strong> contains multiple things to be defined by the user:</p>
+<ul class="simple">
+<li><p><cite>paths</cite>:</p>
+<ul>
+<li><p>sample names and their respective paths to <strong>.bam</strong> files</p></li>
+<li><p>samples can be named as desired but the sample name must be repeated after the colons and prefixed with a <cite>&amp;</cite> sign</p></li>
+<li><p>the <cite>&amp;</cite> prefix sign is used to reference the sample’s path in different places of the same configuration file</p></li>
+<li><p>example use:</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">paths</span><span class="p">:</span>
+  <span class="n">mysample</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">mysample</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">john</span><span class="o">/</span><span class="n">bam_files</span><span class="o">/</span><span class="n">mysample</span><span class="o">.</span><span class="n">bam</span>
+  <span class="n">XYZ</span><span class="o">-</span><span class="mi">123</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">XYZ</span><span class="o">-</span><span class="mi">123</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">john</span><span class="o">/</span><span class="n">bam_files</span><span class="o">/</span><span class="n">XYZ</span><span class="o">-</span><span class="mf">123.</span><span class="n">bam</span>
+  <span class="n">potato95</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">potato95</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">john</span><span class="o">/</span><span class="n">bam_files</span><span class="o">/</span><span class="n">potato95</span><span class="o">.</span><span class="n">bam</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><cite>bed_path</cite>:</p>
+<ul>
+<li><p>path to bed file if using varying window sizes</p></li>
+</ul>
+</li>
+<li><p><cite>comparisons</cite>:</p>
+<ul>
+<li><p>comparison names with respective control and mutant samples per comparison</p></li>
+<li><p>each comparison can be named as desired</p></li>
+<li><p>the sample names to be used as <cite>control</cite> and <cite>mutant</cite> need to be prefixed by a <cite>*</cite> sign</p></li>
+<li><p>the <cite>*</cite> prefixed sign is used to extract the sample’s path defined in the <cite>paths</cite> section</p></li>
+<li><p>example:</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">comparisons</span><span class="p">:</span>
+  <span class="n">comparison</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+    <span class="n">control</span><span class="p">:</span> <span class="o">*</span><span class="n">mysample</span>
+    <span class="n">mutant</span><span class="p">:</span> <span class="o">*</span><span class="n">potato95</span>
+  <span class="n">a</span><span class="o">-</span><span class="n">different</span><span class="o">-</span><span class="n">comparison</span><span class="o">-</span><span class="mi">278</span><span class="n">asd</span><span class="p">:</span>
+    <span class="n">control</span><span class="p">:</span> <span class="o">*</span><span class="n">mysample</span>
+    <span class="n">mutant</span><span class="p">:</span> <span class="o">*</span><span class="n">XYZ</span><span class="o">-</span><span class="mi">123</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><cite>chromosomes</cite>:</p>
+<ul>
+<li><p>list of chromosome names to analyze separated by commas</p></li>
+<li><p>otherwise all chromosomes present in bam file will be analyzed</p></li>
+</ul>
+</li>
+<li><p><cite>parameters</cite>:</p>
+<ul>
+<li><p>parameters used to create window sizes, thresholds, and plots</p></li>
+<li><p>the parameter defaults are provided</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="running-the-rcnv-seq-template-jupyter-notebook">
+<h2>Running the RCNV_seq-template Jupyter Notebook</h2>
+<p>In the <strong>copy-number-analysis/jupyter-notebooks</strong> directory, click on <strong>RCNV_seq-example</strong> and a new tab will open the notebook.</p>
+<p>The notebook contains cells that are populated by text or code. Instructions are provided in the notebook to guide the user.</p>
+<p>The notebook consists of 5 sections:</p>
+<ol class="arabic simple">
+<li><p>User Input (MANDATORY)</p></li>
+<li><p>Installing Required Libraries (optional)</p></li>
+<li><p>Loading Required Libraries (MANDATORY)</p></li>
+<li><p>CNV Calculations and Plotting (MANDATORY)</p></li>
+<li><p>Plotting Specific Window of One Chromosome (optional)</p></li>
+</ol>
+<p>To run a cell, click on the corresponding cell and press <strong>Ctrl + Enter</strong> or <strong>Shift + Enter</strong>.</p>
+</div>
+<div class="section" id="references">
+<h2>References</h2>
+<p><strong>BMC Bioinformatics Publication</strong>:</p>
+<ul class="simple">
+<li><p>CNV-seq, a new method to detect copy number variation using high-throughput sequencing [<a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-80">LINK</a>]</p></li>
+</ul>
+<p><strong>GitHub repositories</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/hliang/cnv-seq">hliang/cnv-seq</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNV-seq">Bioconductor/copy-number-analysis</a></p></li>
+<li><p><a class="reference external" href="https://github.com/amora197/copy-number-analysis">amora197/copy-number-analysis</a></p></li>
+</ul>
+</div>
 </div>
 
 
@@ -172,25 +433,28 @@
            
           </div>
           <footer>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, H. Liang, Bioconductor, Anibal E. Morales.
+        
+        &copy; Copyright 2021, H. Liang, Bioconductor, Anibal E. Morales
 
     </p>
   </div>
     
     
     
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
+
         </div>
       </div>
 
