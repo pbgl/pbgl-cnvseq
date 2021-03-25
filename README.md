@@ -1,11 +1,13 @@
-New Documentation by PBGL
+Documentation by PBGL
 =========================
+
+This repository was forked from <a href="https://github.com/Bioconductor/copy-number-analysis">Bioconductor's copy-number-analysis</a> and edited accordingly to meet PBGL's needs by adding Jupyter Notebook functionalities. Its original documentation can be found in the section "Original Documentation from Bioconductor" below.
 
 Newer documentation on running the CNV-seq Jupyter Notebook can be found clicking on the hyperlink below:
 
 * <a href="https://copy-number-analysis.readthedocs.io/en/latest/">Read-the-Docs of PBGL's CNV-seq Analysis</a>
 
-Older Documentation by Bioconductor
+Original Documentation from Bioconductor
 =================================
 
 Copy Number Analysis 
