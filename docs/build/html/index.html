@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>PBGL CNV-seq Analysis &mdash; copy-number-analysis 1.0 documentation</title>
   
@@ -16,7 +16,10 @@
 
   
   
+
   
+  
+
   
 
   
@@ -29,7 +32,6 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
-        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -49,7 +51,7 @@
           
 
           
-            <a href="#" class="icon icon-home" alt="Documentation Home"> copy-number-analysis
+            <a href="#" class="icon icon-home"> copy-number-analysis
           
 
           
@@ -140,6 +142,8 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
@@ -151,7 +155,7 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -166,11 +170,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="pbgl-cnv-seq-analysis">
-<h1>PBGL CNV-seq Analysis</h1>
+<h1>PBGL CNV-seq Analysis<a class="headerlink" href="#pbgl-cnv-seq-analysis" title="Permalink to this headline">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="section" id="background">
-<h2>Background</h2>
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
 <p><strong>[DRAFT]</strong></p>
 <p>Copy number variation (CNV) analysis using CNV-seq, R, Jupyter Notebooks, Miniconda3, and Git.</p>
 <div class="admonition note">
@@ -179,20 +183,20 @@
 </div>
 </div>
 <div class="section" id="installations">
-<h2>Installations</h2>
-<p>Before installing any necessary software, it is recommended to check if the computer is running 32-bit or 64-bit. Run the following to verify the system:</p>
+<h2>Installations<a class="headerlink" href="#installations" title="Permalink to this headline">¶</a></h2>
+<p>Before installing any necessary software, it is recommended to check if the computer is running 32-bit or 64-bit for downloading Miniconda3. Run the following to verify the system:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ uname -m
 </pre></div>
 </div>
 <div class="section" id="miniconda3-conda">
-<h3>Miniconda3 (conda)</h3>
+<h3>Miniconda3 (conda)<a class="headerlink" href="#miniconda3-conda" title="Permalink to this headline">¶</a></h3>
 <p>Download the Miniconda3, or simply “conda”, installer:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html#linux-installers">Miniconda3 installer for Linux</a></p></li>
 </ul>
 </div></blockquote>
-<p>Run the downloaded installer:</p>
+<p>Run the downloaded installer (for a 64-bit system):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash Miniconda3-latest-Linux-x86_64.sh
 </pre></div>
 </div>
@@ -202,7 +206,7 @@
 </div>
 </div>
 <div class="section" id="git-with-conda">
-<h3>Git with conda</h3>
+<h3>Git with conda<a class="headerlink" href="#git-with-conda" title="Permalink to this headline">¶</a></h3>
 <p>Git will be installed first to clone locally (download a copy to your local computer) the CNV-seq repository from GitHub. To do so, run the following:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c anaconda git
 </pre></div>
@@ -218,7 +222,7 @@
 <p>A folder called <strong>copy-number-analysis</strong> should be listed in the directory.</p>
 </div>
 <div class="section" id="required-libraries-with-conda">
-<h3>Required Libraries with conda</h3>
+<h3>Required Libraries with conda<a class="headerlink" href="#required-libraries-with-conda" title="Permalink to this headline">¶</a></h3>
 <p>CNV-seq has multiple dependencies, listed below:</p>
 <ul class="simple">
 <li><p>Git</p></li>
@@ -238,7 +242,7 @@
 </ul>
 <p>There are two ways to install the rest of the necessary libraries to run CNV-seq: automatically or manually. The former is slower, providing a long coffee break while the conda installations run. The latter proves a faster way to get the tool up-and-running.</p>
 <div class="section" id="automatically-slower">
-<h4>Automatically (slower)</h4>
+<h4>Automatically (slower)<a class="headerlink" href="#automatically-slower" title="Permalink to this headline">¶</a></h4>
 <p>Two YAML files, <strong>environment.yml</strong> and <strong>libraries.yml</strong>, are provided to automatically create a conda environment and install the dependent libraries. The former creates the conda environment, along R, Jupyter Notebook, and the R-kernel in Jupyter. The latter installs dependent R libraries. Run <strong>environment.yml</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda env create --file envs/environment.yml
 </pre></div>
@@ -258,9 +262,13 @@ $ conda env update --file envs/libraries.yml
 </div>
 </div>
 <div class="section" id="manually-faster">
-<h4>Manually (faster)</h4>
+<h4>Manually (faster)<a class="headerlink" href="#manually-faster" title="Permalink to this headline">¶</a></h4>
 <p>To manually create and activate an environment, run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create --name cnv-seq
+</pre></div>
+</div>
+<p>Once done, the created environment can be verified running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda env list
 </pre></div>
 </div>
 <p>Activate the virtual environment with:</p>
@@ -271,10 +279,10 @@ $ conda env update --file envs/libraries.yml
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge r-base=4.0
 $ conda install -c anaconda jupyter
 $ conda install -c r r-irkernel
-$ conda install -y -c conda-forge r-biocmanager
-$ conda install -y -c bioconda bioconductor-genomicalignments
-$ conda install -y -c pcgr r-configr
-$ conda install -y -c r r-ggplot2
+$ conda install -c conda-forge r-biocmanager
+$ conda install -c bioconda bioconductor-genomicalignments
+$ conda install -c pcgr r-configr
+$ conda install -c r r-ggplot2
 </pre></div>
 </div>
 <p>Once done, all the necessary packages should be installed. This can be verified with:</p>
@@ -285,7 +293,7 @@ $ conda install -y -c r r-ggplot2
 </div>
 </div>
 <div class="section" id="running-a-jupyter-notebook">
-<h2>Running a Jupyter Notebook</h2>
+<h2>Running a Jupyter Notebook<a class="headerlink" href="#running-a-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
 <p>To access the Jupyter Notebooks, run:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter notebook
 </pre></div>
@@ -320,12 +328,12 @@ $ conda install -y -c r r-ggplot2
 </li>
 <li><p>two Jupyter Notebooks:</p>
 <ul>
-<li><p>RCNV_seq-example.ipynb</p>
+<li><p>RCNV-seq-example.ipynb</p>
 <ul>
 <li><p>example analysis of sorghum</p></li>
 </ul>
 </li>
-<li><p>RCNV_seq-template.ipynb</p>
+<li><p>RCNV-seq-template.ipynb</p>
 <ul>
 <li><p>template for the user</p></li>
 </ul>
@@ -333,21 +341,25 @@ $ conda install -y -c r r-ggplot2
 </ul>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Jupyter lets the user duplicate, rename, move, download, view, or edit files in a web browser. This can be done by clicking the box next to a file and choosing accordingly.</p>
+</div>
 </div>
 <div class="section" id="editing-the-configuration-file">
-<h2>Editing the Configuration File</h2>
+<h2>Editing the Configuration File<a class="headerlink" href="#editing-the-configuration-file" title="Permalink to this headline">¶</a></h2>
 <p>In order to run the CNV-seq Jupyter Notebook, the user needs to feed it with a configuration file (<strong>config-CNVseq.yml</strong>) that specifies the paths to the bam files, comparisons to be done, chromosomes to analyze, and parameter definitions for calculating and plotting CNVs.</p>
 <p>The configuration file <strong>config-CNVseq.yml</strong> can be found in the <strong>copy-number-analysis/jupyter-notebooks/config</strong> directory.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The user needs to edit <strong>config-CNVseq.yml</strong> to point towards bam/bed files; specify comparisons and chromosomes to analyze; and define the parameters to calculate/plot CNVs.</p>
 </div>
-<p>Two example configuration files are provided (<strong>example1-config-CNVseq-coffee.yml</strong> and <strong>example2-config-CNVseq-sorghum.yml</strong>). The configuration file <strong>config-CNVseq.yml</strong> contains multiple things to be defined by the user:</p>
+<p>Two example configuration files are provided (<strong>example1-config-CNVseq-coffee.yml</strong> and <strong>example2-config-CNVseq-sorghum.yml</strong>). The configuration file <strong>config-CNVseq.yml</strong> contains multiple parameters to be defined by the user:</p>
 <ul class="simple">
 <li><p><cite>paths</cite>:</p>
 <ul>
 <li><p>sample names and their respective paths to <strong>.bam</strong> files</p></li>
-<li><p>samples can be named as desired but the sample name must be repeated after the colons and prefixed with a <cite>&amp;</cite> sign</p></li>
+<li><p>samples can be named as desired but the sample name must be repeated after the colon and prefixed with a <cite>&amp;</cite> sign</p></li>
 <li><p>the <cite>&amp;</cite> prefix sign is used to reference the sample’s path in different places of the same configuration file</p></li>
 <li><p>example use:</p></li>
 </ul>
@@ -388,7 +400,7 @@ $ conda install -y -c r r-ggplot2
 <li><p><cite>chromosomes</cite>:</p>
 <ul>
 <li><p>list of chromosome names to analyze separated by commas</p></li>
-<li><p>otherwise all chromosomes present in bam file will be analyzed</p></li>
+<li><p>chromosome names can be extracted from a bam file’s header</p></li>
 </ul>
 </li>
 <li><p><cite>parameters</cite>:</p>
@@ -400,8 +412,12 @@ $ conda install -y -c r r-ggplot2
 </ul>
 </div>
 <div class="section" id="running-the-rcnv-seq-template-jupyter-notebook">
-<h2>Running the RCNV_seq-template Jupyter Notebook</h2>
-<p>In the <strong>copy-number-analysis/jupyter-notebooks</strong> directory, click on <strong>RCNV_seq-example</strong> and a new tab will open the notebook.</p>
+<h2>Running the RCNV_seq-template Jupyter Notebook<a class="headerlink" href="#running-the-rcnv-seq-template-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to duplicate the <strong>RCNV-seq-template</strong> notebook and then renaming the copy before doing any edits to the notebook.</p>
+</div>
+<p>In the <strong>copy-number-analysis/jupyter-notebooks</strong> directory, click on <strong>RCNV-seq-template</strong> and a new tab will open the notebook.</p>
 <p>The notebook contains cells that are populated by text or code. Instructions are provided in the notebook to guide the user.</p>
 <p>The notebook consists of 5 sections:</p>
 <ol class="arabic simple">
@@ -414,7 +430,7 @@ $ conda install -y -c r r-ggplot2
 <p>To run a cell, click on the corresponding cell and press <strong>Ctrl + Enter</strong> or <strong>Shift + Enter</strong>.</p>
 </div>
 <div class="section" id="references">
-<h2>References</h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p><strong>BMC Bioinformatics Publication</strong>:</p>
 <ul class="simple">
 <li><p>CNV-seq, a new method to detect copy number variation using high-throughput sequencing [<a class="reference external" href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-80">LINK</a>]</p></li>
@@ -433,28 +449,25 @@ $ conda install -y -c r r-ggplot2
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        
-        &copy; Copyright 2021, H. Liang, Bioconductor, Anibal E. Morales
+        &#169; Copyright 2021, H. Liang, Bioconductor, Anibal E. Morales.
 
     </p>
   </div>
     
     
     
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
     provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 

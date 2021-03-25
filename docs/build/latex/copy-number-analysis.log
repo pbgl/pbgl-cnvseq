@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.3)  24 MAR 2021 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.3)  25 MAR 2021 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,7 +466,7 @@ Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \c@AlphaCnt=\count101
 \c@AlphaDecCnt=\count102
 ) (./sphinx.sty
-Package: sphinx 2019/09/02 v2.3.0 LaTeX package (Sphinx markup)
+Package: sphinx 2021/01/23 v3.5.0 LaTeX package (Sphinx markup)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
@@ -763,17 +763,18 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 \FV@StepNumber=\count112
 \FV@OutFile=\write3
 ) (./footnotehyper-sphinx.sty
-Package: footnotehyper-sphinx 2017/10/27 v1.7 hyperref aware footnote.sty for s
-phinx (JFB)
+Package: footnotehyper-sphinx 2021/02/04 v1.1d hyperref aware footnote.sty for 
+sphinx (JFB)
 \FNH@notes=\box35
+\FNH@toks=\toks25
 \FNH@width=\dimen134
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count113
-\float@exts=\toks25
+\float@exts=\toks26
 \float@box=\box36
-\@float@everytoks=\toks26
+\@float@everytoks=\toks27
 \@floatcapt=\box37
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
@@ -781,7 +782,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \WF@size=\dimen136
 \c@WF@wrappedlines=\count114
 \WF@box=\box38
-\WF@everypar=\toks27
+\WF@everypar=\toks28
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
@@ -801,6 +802,55 @@ Package: capt-of 2009/12/29 v0.2 standard captions outside of floats
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count115
+\mult@box=\box39
+\multicol@leftmargin=\dimen137
+\c@unbalance=\count116
+\c@collectmore=\count117
+\doublecol@number=\count118
+\multicoltolerance=\count119
+\multicolpretolerance=\count120
+\full@width=\dimen138
+\page@free=\dimen139
+\premulticols=\dimen140
+\postmulticols=\dimen141
+\multicolsep=\skip71
+\multicolbaselineskip=\skip72
+\partial@page=\box40
+\last@line=\box41
+\maxbalancingoverflow=\dimen142
+\mult@rightbox=\box42
+\mult@grightbox=\box43
+\mult@gfirstbox=\box44
+\mult@firstbox=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\@tempa=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\c@columnbadness=\count121
+\c@finalcolumnbadness=\count122
+\last@try=\dimen143
+\multicolovershoot=\dimen144
+\multicolundershoot=\dimen145
+\mult@nat@firstbox=\box63
+\colbreak@box=\box64
+\mc@col@check@num=\count123
+)
 (./sphinxhighlight.sty
 Package: sphinxhighlight 2016/05/29 stylesheet for highlighting with pygments
 )
@@ -825,22 +875,24 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-\sphinxverbatimsep=\dimen137
-\sphinxverbatimborder=\dimen138
-\sphinxshadowsep=\dimen139
-\sphinxshadowsize=\dimen140
-\sphinxshadowrule=\dimen141
-\spx@notice@border=\dimen142
-\spx@image@maxheight=\dimen143
-\spx@image@box=\dimen144
-\c@literalblock=\count115
-\sphinxcontinuationbox=\box39
-\sphinxvisiblespacebox=\box40
-\sphinxVerbatim@TitleBox=\box41
-\sphinxVerbatim@ContentsBox=\box42
-\py@argswidth=\skip71
-\lineblockindentation=\skip72
-\DUlineblockindent=\skip73
+\sphinxverbatimsep=\dimen146
+\sphinxverbatimborder=\dimen147
+\sphinxshadowsep=\dimen148
+\sphinxshadowsize=\dimen149
+\sphinxshadowrule=\dimen150
+\spx@notice@border=\dimen151
+\spx@image@maxheight=\dimen152
+\spx@image@box=\box65
+\c@sphinxscope=\count124
+\c@sphinxexplicit=\count125
+\sphinxcontinuationbox=\box66
+\sphinxvisiblespacebox=\box67
+\sphinxVerbatim@TitleBox=\box68
+\sphinxVerbatim@ContentsBox=\box69
+\spx@scratchbox=\box70
+\py@argswidth=\skip73
+\lineblockindentation=\skip74
+\DUlineblockindent=\skip75
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -855,18 +907,18 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count116
-\Gm@cntv=\count117
-\c@Gm@tempcnt=\count118
-\Gm@bindingoffset=\dimen145
-\Gm@wd@mp=\dimen146
-\Gm@odd@mp=\dimen147
-\Gm@even@mp=\dimen148
-\Gm@layoutwidth=\dimen149
-\Gm@layoutheight=\dimen150
-\Gm@layouthoffset=\dimen151
-\Gm@layoutvoffset=\dimen152
-\Gm@dimlist=\toks28
+\Gm@cnth=\count126
+\Gm@cntv=\count127
+\c@Gm@tempcnt=\count128
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
@@ -912,16 +964,16 @@ Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen153
-\Hy@linkcounter=\count119
-\Hy@pagecounter=\count120
+\@linkdim=\dimen161
+\Hy@linkcounter=\count129
+\Hy@pagecounter=\count130
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count121
+\Hy@SavedSpaceFactor=\count131
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -942,17 +994,17 @@ Package hyperref Info: Plain pages OFF on input line 4524.
 Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
-\c@Hy@tempcnt=\count122
+\c@Hy@tempcnt=\count132
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5115.
-\XeTeXLinkMargin=\dimen154
-\Fld@menulength=\count123
-\Field@Width=\dimen155
-\Fld@charsize=\dimen156
+\XeTeXLinkMargin=\dimen162
+\Fld@menulength=\count133
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
 Package hyperref Info: Hyper figures OFF on input line 6369.
 Package hyperref Info: Link nesting OFF on input line 6374.
 Package hyperref Info: Hyper index ON on input line 6377.
@@ -962,23 +1014,23 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6394.
 Package hyperref Info: PDF/A mode OFF on input line 6399.
 LaTeX Info: Redefining \ref on input line 6439.
 LaTeX Info: Redefining \pageref on input line 6443.
-\Hy@abspage=\count124
-\c@Item=\count125
-\c@Hfootnote=\count126
+\Hy@abspage=\count134
+\c@Item=\count135
+\c@Hfootnote=\count136
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
-\Fld@listcount=\count127
-\c@bookmark@seq@number=\count128
+\Fld@listcount=\count137
+\c@bookmark@seq@number=\count138
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip74
+\Hy@SectionHShift=\skip76
 )
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/hypcap.sty
 Package: hypcap 2016/05/16 v1.12 Adjusting the anchors of captions (HO)
@@ -1024,17 +1076,17 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
-\scratchdimen=\dimen157
-\scratchbox=\box43
-\nofMPsegments=\count130
-\nofMParguments=\count131
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count132
-\MPscratchDim=\dimen158
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count139
+\scratchdimen=\dimen165
+\scratchbox=\box71
+\nofMPsegments=\count140
+\nofMParguments=\count141
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen166
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1052,6 +1104,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@literalblock=\count145
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1086,7 +1140,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box44
+\AtBeginShipoutBox=\box72
 Package hyperref Info: Link coloring ON on input line 82.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1094,7 +1148,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count135
+\c@section@level=\count146
 )
 LaTeX Info: Redefining \ref on input line 82.
 LaTeX Info: Redefining \pageref on input line 82.
@@ -1144,14 +1198,14 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 ] [2
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 134.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 138.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 139.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 143.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 143.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 148.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -1166,23 +1220,23 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 [7] [8
 
 ] (./copy-number-analysis.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 619.
  [9
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 619.
  (./copy-number-analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 516.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 516.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 619.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 619.
 Package rerunfilecheck Info: File `copy-number-analysis.out' has not changed.
 (rerunfilecheck)             Checksum: 417E9ADEBBA6BA8A86F123E5FC4D8870;1815.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 516.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 619.
  ) 
 Here is how much of TeX's memory you used:
- 13610 strings out of 492982
- 188749 string characters out of 6134896
- 292870 words of memory out of 5000000
- 16856 multiletter control sequences out of 15000+600000
+ 13799 strings out of 492982
+ 191897 string characters out of 6134896
+ 298600 words of memory out of 5000000
+ 17042 multiletter control sequences out of 15000+600000
  45319 words of font info for 53 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  37i,11n,45p,844b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1191,7 +1245,7 @@ e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on copy-number-analysis.pdf (10 pages, 93840 bytes).
+Output written on copy-number-analysis.pdf (10 pages, 94238 bytes).
 PDF statistics:
  150 PDF objects out of 1000 (max. 8388607)
  126 compressed objects within 2 object streams

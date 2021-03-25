@@ -22,7 +22,7 @@ Copy number variation (CNV) analysis using CNV-seq, R, Jupyter Notebooks, Minico
 Installations
 -------------
 
-Before installing any necessary software, it is recommended to check if the computer is running 32-bit or 64-bit. Run the following to verify the system:
+Before installing any necessary software, it is recommended to check if the computer is running 32-bit or 64-bit for downloading Miniconda3. Run the following to verify the system:
 
 ::
 
@@ -35,7 +35,7 @@ Download the Miniconda3, or simply "conda", installer:
  
  - `Miniconda3 installer for Linux <https://docs.conda.io/en/latest/miniconda.html#linux-installers>`_
 
-Run the downloaded installer:
+Run the downloaded installer (for a 64-bit system):
 
 ::
 
@@ -127,6 +127,12 @@ To manually create and activate an environment, run:
 
    $ conda create --name cnv-seq
    
+Once done, the created environment can be verified running:
+
+::
+
+   $ conda env list
+   
 Activate the virtual environment with:
 
 :: 
@@ -140,10 +146,10 @@ Start running the installations of the necessary libraries, paying attention to 
    $ conda install -c conda-forge r-base=4.0
    $ conda install -c anaconda jupyter
    $ conda install -c r r-irkernel
-   $ conda install -y -c conda-forge r-biocmanager
-   $ conda install -y -c bioconda bioconductor-genomicalignments
-   $ conda install -y -c pcgr r-configr
-   $ conda install -y -c r r-ggplot2
+   $ conda install -c conda-forge r-biocmanager
+   $ conda install -c bioconda bioconductor-genomicalignments
+   $ conda install -c pcgr r-configr
+   $ conda install -c r r-ggplot2
    
 Once done, all the necessary packages should be installed. This can be verified with:
 
@@ -185,13 +191,16 @@ Look for the directory **copy-number-analysis** and click on it. Click on **jupy
     
 - two Jupyter Notebooks:
 
-  - RCNV_seq-example.ipynb
+  - RCNV-seq-example.ipynb
   
     - example analysis of sorghum
     
-  - RCNV_seq-template.ipynb
+  - RCNV-seq-template.ipynb
     
     - template for the user
+    
+.. note::
+   Jupyter lets the user duplicate, rename, move, download, view, or edit files in a web browser. This can be done by clicking the box next to a file and choosing accordingly. 
    
 Editing the Configuration File
 ------------------------------
@@ -203,12 +212,12 @@ The configuration file **config-CNVseq.yml** can be found in the **copy-number-a
 .. note::
    The user needs to edit **config-CNVseq.yml** to point towards bam/bed files; specify comparisons and chromosomes to analyze; and define the parameters to calculate/plot CNVs.  
 
-Two example configuration files are provided (**example1-config-CNVseq-coffee.yml** and **example2-config-CNVseq-sorghum.yml**). The configuration file **config-CNVseq.yml** contains multiple things to be defined by the user:
+Two example configuration files are provided (**example1-config-CNVseq-coffee.yml** and **example2-config-CNVseq-sorghum.yml**). The configuration file **config-CNVseq.yml** contains multiple parameters to be defined by the user:
 
 - `paths`:
 
   - sample names and their respective paths to **.bam** files
-  - samples can be named as desired but the sample name must be repeated after the colons and prefixed with a `&` sign
+  - samples can be named as desired but the sample name must be repeated after the colon and prefixed with a `&` sign
   - the `&` prefix sign is used to reference the sample's path in different places of the same configuration file
   - example use:
   
@@ -244,7 +253,7 @@ Two example configuration files are provided (**example1-config-CNVseq-coffee.ym
 - `chromosomes`: 
 
   - list of chromosome names to analyze separated by commas
-  - otherwise all chromosomes present in bam file will be analyzed
+  - chromosome names can be extracted from a bam file's header
   
 - `parameters`:
 
@@ -254,7 +263,10 @@ Two example configuration files are provided (**example1-config-CNVseq-coffee.ym
 Running the RCNV_seq-template Jupyter Notebook
 ----------------------------------------------
 
-In the **copy-number-analysis/jupyter-notebooks** directory, click on **RCNV_seq-example** and a new tab will open the notebook.  
+.. note::
+   It is recommended to duplicate the **RCNV-seq-template** notebook and then renaming the copy before doing any edits to the notebook.
+
+In the **copy-number-analysis/jupyter-notebooks** directory, click on **RCNV-seq-template** and a new tab will open the notebook.
 
 The notebook contains cells that are populated by text or code. Instructions are provided in the notebook to guide the user.  
 
