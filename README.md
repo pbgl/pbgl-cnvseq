@@ -1,5 +1,15 @@
+New Documentation by PBGL
+=========================
+
+Newer documentation on running the CNV-seq Jupyter Notebook can be found clicking on the hyperlink below:
+
+* <a href="https://copy-number-analysis.readthedocs.io/en/latest/">Read-the-Docs of PBGL's CNV-seq Analysis</a>
+
+Older Documentation by Bioconductor
+=================================
+
 Copy Number Analysis 
-=====================
+---------------------------------
 
 Explore, compare, and evaluate Bioconductor packages related to genomic copy number analysis
 
@@ -15,7 +25,7 @@ Our purpose here is to provide
 * Demonstrate (and evaluate) the capabilities of many of the Bioconductor copy number analysis packages
 
 List of Tools used
-===================
+--------------------------
 Bioconductor Packages
 * <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CountOverlaps-method-from-IRanges-Package">countOverlaps</a>
 * <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/cn.mops">cn.mops</a>
@@ -31,12 +41,12 @@ Non Biocondcutor packages
 
 
 Literature Resources
-=========================
+--------------------------------
 * Alkan, C., et al. (2011). <a href="http://www.ncbi.nlm.nih.gov/pubmed/21358748">"Genome structural variation discovery and genotyping."</a> Nat Rev Genet 12(5): 363-376. 
 * Duan J, Zhang J-G, Deng H-W, Wang Y-P (2013) <a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0059128">Comparative Studies of Copy Number Variation Detection Methods for Next-Generation Sequencing Technologies.</a> PLoS ONE 8(3): e59128. doi:10.1371/journal.pone.0059128
 
 Sample Data
-===========
+--------------------
 * http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam
 * http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai
 * http://s3.amazonaws.com/copy-number-analysis/normalA.chr4.bam
@@ -50,6 +60,6 @@ download.file(url="http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.
 
 
 Exploratory Data Analysis
-==========================
+----------------------------------------
 We have done some primary <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/Exploratory-Data-Analysis">Exploratory Data Analysis</a> on the Normal and Tumor Sample Datasets.
 
