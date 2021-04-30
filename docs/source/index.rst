@@ -69,6 +69,8 @@ CNV-seq has multiple dependencies, listed below:
 
   -  IRkernel
 
+The necessary R packages are installed through the Jupyter Notebook. It proves as a faster and error-free way to install **configr**, **ggplot2**, **Biocmanager**, and **Bioconductor-GenomicAlignments** packages.
+
 There are two ways to install the rest of the necessary libraries to run CNV-seq: automatically or manually. The former is slower, providing a long coffee break while the conda installations run. It also tends to raise conflicts. The latter proves a faster and more direct way to get the tool up-and-running. 
 
 Automatically (slower)
