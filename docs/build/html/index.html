@@ -200,8 +200,11 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash Miniconda3-latest-Linux-x86_64.sh
 </pre></div>
 </div>
-<p>Open a new terminal window for conda to take effect. Verify the installation in new terminal window with:</p>
+<p>Open a new terminal window for conda to take effect. Verify the installation and update conda in new terminal window with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda list
+$ conda update conda
+$ conda update --all
+$ conda upgrade --all
 </pre></div>
 </div>
 </div>
@@ -276,13 +279,8 @@ $ conda env update --file envs/libraries.yml
 </pre></div>
 </div>
 <p>Start running the installations of the necessary libraries, paying attention to the prompts for each one:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge r-base=4.0
-$ conda install -c anaconda jupyter
-$ conda install -c r r-irkernel
-$ conda install -c conda-forge r-biocmanager
-$ conda install -c bioconda bioconductor-genomicalignments
-$ conda install -c pcgr r-configr
-$ conda install -c r r-ggplot2
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install notebook
+$ conda install r-irkernel
 </pre></div>
 </div>
 <p>Once done, all the necessary packages should be installed. This can be verified with:</p>
@@ -422,7 +420,7 @@ $ conda install -c r r-ggplot2
 <p>The notebook consists of 5 sections:</p>
 <ol class="arabic simple">
 <li><p>User Input (MANDATORY)</p></li>
-<li><p>Installing Required Libraries (optional)</p></li>
+<li><p>Installing Required R Libraries (mandatory only first time)</p></li>
 <li><p>Loading Required Libraries (MANDATORY)</p></li>
 <li><p>CNV Calculations and Plotting (MANDATORY)</p></li>
 <li><p>Plotting Specific Window of One Chromosome (optional)</p></li>

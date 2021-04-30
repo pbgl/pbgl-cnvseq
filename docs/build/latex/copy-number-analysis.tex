@@ -73,7 +73,7 @@
 
 
 \title{copy\sphinxhyphen{}number\sphinxhyphen{}analysis}
-\date{Mar 25, 2021}
+\date{Apr 30, 2021}
 \release{1.0}
 \author{Anibal Morales, IAEA PBGL \sphinxhyphen{} UN FAO}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -100,7 +100,7 @@
 	    \vspace{10mm}
             \normalsize Created: March, 2021\\
             \vspace*{0mm}
-            \normalsize  Last updated: 25 March 2021
+            \normalsize  Last updated: 30 April 2021
             %% \vfill adds at the bottom
             \vfill
             \small\flushleft {{\textbf {Please note:}} \textit {This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views
@@ -159,10 +159,13 @@ Run the downloaded installer (for a 64\sphinxhyphen{}bit system):
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Open a new terminal window for conda to take effect. Verify the installation in new terminal window with:
+Open a new terminal window for conda to take effect. Verify the installation and update conda in new terminal window with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} conda list
+\PYGZdl{} conda update conda
+\PYGZdl{} conda update \PYGZhy{}\PYGZhy{}all
+\PYGZdl{} conda upgrade \PYGZhy{}\PYGZhy{}all
 \end{sphinxVerbatim}
 
 
@@ -299,13 +302,8 @@ Activate the virtual environment with:
 Start running the installations of the necessary libraries, paying attention to the prompts for each one:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda install \PYGZhy{}c conda\PYGZhy{}forge r\PYGZhy{}base=4.0
-\PYGZdl{} conda install \PYGZhy{}c anaconda jupyter
-\PYGZdl{} conda install \PYGZhy{}c r r\PYGZhy{}irkernel
-\PYGZdl{} conda install \PYGZhy{}c conda\PYGZhy{}forge r\PYGZhy{}biocmanager
-\PYGZdl{} conda install \PYGZhy{}c bioconda bioconductor\PYGZhy{}genomicalignments
-\PYGZdl{} conda install \PYGZhy{}c pcgr r\PYGZhy{}configr
-\PYGZdl{} conda install \PYGZhy{}c r r\PYGZhy{}ggplot2
+\PYGZdl{} conda install notebook
+\PYGZdl{} conda install r\PYGZhy{}irkernel
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -564,7 +562,7 @@ User Input (MANDATORY)
 
 \item {} 
 \sphinxAtStartPar
-Installing Required Libraries (optional)
+Installing Required R Libraries (mandatory only first time)
 
 \item {} 
 \sphinxAtStartPar

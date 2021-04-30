@@ -41,11 +41,14 @@ Run the downloaded installer (for a 64-bit system):
 
    $ bash Miniconda3-latest-Linux-x86_64.sh
    
-Open a new terminal window for conda to take effect. Verify the installation in new terminal window with:
+Open a new terminal window for conda to take effect. Verify the installation and update conda in new terminal window with:
 
 ::
 
    $ conda list
+   $ conda update conda
+   $ conda update --all
+   $ conda upgrade --all
    
 Git with conda
 ^^^^^^^^^^^^^^
@@ -143,13 +146,8 @@ Start running the installations of the necessary libraries, paying attention to 
 
 ::
 
-   $ conda install -c conda-forge r-base=4.0
-   $ conda install -c anaconda jupyter
-   $ conda install -c r r-irkernel
-   $ conda install -c conda-forge r-biocmanager
-   $ conda install -c bioconda bioconductor-genomicalignments
-   $ conda install -c pcgr r-configr
-   $ conda install -c r r-ggplot2
+   $ conda install notebook
+   $ conda install r-irkernel
    
 Once done, all the necessary packages should be installed. This can be verified with:
 
@@ -273,7 +271,7 @@ The notebook contains cells that are populated by text or code. Instructions are
 The notebook consists of 5 sections:
 
 1. User Input (MANDATORY)
-2. Installing Required Libraries (optional)
+2. Installing Required R Libraries (mandatory only first time)
 3. Loading Required Libraries (MANDATORY)
 4. CNV Calculations and Plotting (MANDATORY)
 5. Plotting Specific Window of One Chromosome (optional)
