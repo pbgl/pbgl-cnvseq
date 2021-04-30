@@ -50,28 +50,6 @@ Open a new terminal window for conda to take effect. Verify the installation and
    $ conda update --all
    $ conda upgrade --all
    
-Git with conda
-^^^^^^^^^^^^^^
-
-Git will be installed first to clone locally (download a copy to your local computer) the CNV-seq repository from GitHub. To do so, run the following:
-
-::
-
-   $ conda install -c anaconda git
-   
-After the installation, clone the CNV-seq repository to the local computer in the desired directory.
-
-::
-
-   $ git clone https://github.com/amora197/copy-number-analysis.git
-   
-Verify that the installation is complete by listing the files in the directory.
-
-::
-
-   $ ls -l
-   
-A folder called **copy-number-analysis** should be listed in the directory.
    
 Required Libraries with conda
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -91,7 +69,7 @@ CNV-seq has multiple dependencies, listed below:
 
   -  IRkernel
 
-There are two ways to install the rest of the necessary libraries to run CNV-seq: automatically or manually. The former is slower, providing a long coffee break while the conda installations run. The latter proves a faster way to get the tool up-and-running. 
+There are two ways to install the rest of the necessary libraries to run CNV-seq: automatically or manually. The former is slower, providing a long coffee break while the conda installations run. It also tends to raise conflicts. The latter proves a faster and more direct way to get the tool up-and-running. 
 
 Automatically (slower)
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -148,12 +126,30 @@ Start running the installations of the necessary libraries, paying attention to 
 
    $ conda install notebook
    $ conda install r-irkernel
+   $ conda install git
    
 Once done, all the necessary packages should be installed. This can be verified with:
 
 ::
 
    $ conda list
+
+Cloning Locally the CNV Github Repository
+-----------------------------------------
+
+Git is used to clone locally (download a copy to your local computer) the CNV-seq repository from GitHub in a directory of choice.
+
+::
+
+   $ git clone https://github.com/amora197/copy-number-analysis.git
+   
+Verify that the installation is complete by listing the files in the directory.
+
+::
+
+   $ ls -l
+   
+A folder called **copy-number-analysis** should be listed in the directory.
    
 Running a Jupyter Notebook
 --------------------------
