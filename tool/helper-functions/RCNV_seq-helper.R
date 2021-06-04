@@ -1,16 +1,16 @@
-## Most of the helper functions in the 'Bioconductor Helper Functions'
-## section were published in Bioconductor's copy-number-analysis repository
-## in the following link:
+## These are helper functions to run hliang's cnv-seq tool found in:
+## - https://github.com/hliang/cnv-seq
 ##
+## Most of the functions below are from the 'Bioconductor Helper Functions'
+## in Bioconductor's copy-number-analysis repository
+## 
 ## - https://github.com/Bioconductor/copy-number-analysis
 ##
-## PBGL supplemented helper functions under the 'PBGL Helper Functions' 
-## section to run hliang's cnv-seq tool found in:
-##
-## - https://github.com/hliang/cnv-seq
+## We had to patch the function ("as.countsfile") and added additional 'PBGL Helper Functions'.
+
 
 #################################################################################
-############################### Bash/Perl command ###############################
+######################### Bioconductor Helper Functions #########################
 #################################################################################
 
 ## samtools view -F 4 tumorA.chr4.bam |\
@@ -19,10 +19,6 @@
 ##     perl -lane 'print "$F[2]\t$F[3]"' >normal.hits
 ## perl cnv-seq/cnv-seq.pl --test tumor.hits --ref normal.hits \
 ##     --genome human --Rexe "~/bin/R-devel/bin/R"
-
-#################################################################################
-######################### Bioconductor Helper Functions #########################
-#################################################################################
 
 # extract genome size from bam file
 genomeSize <- function(files)

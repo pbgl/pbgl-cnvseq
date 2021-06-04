@@ -95,7 +95,7 @@ latex_maketitle = r'''
 	    \vspace{10mm}
             \normalsize Created: March, 2021\\
             \vspace*{0mm}
-            \normalsize  Last updated: 30 April 2021
+            \normalsize  Last updated: 04 June 2021
             %% \vfill adds at the bottom
             \vfill
             \small\flushleft {{\textbf {Please note:}} \textit {This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views
