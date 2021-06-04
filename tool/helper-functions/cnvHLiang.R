@@ -1,3 +1,8 @@
+## Original functions by HLiang's cnv-seq to calculate 
+## copy number ratios found in:
+## - https://github.com/hliang/cnv-seq
+
+# calculate copy number ratio
 cnv.cal <- function(file, log2.threshold=NA, chromosomal.normalization=TRUE, annotate=FALSE, minimum.window=4)
 {
 	if(is.na(log2.threshold))
@@ -106,6 +111,7 @@ cnv.cal <- function(file, log2.threshold=NA, chromosomal.normalization=TRUE, ann
 	data
 }
 
+# convert z ratio to t ratio with Geary-hinkley transformation
 z2t <- function(z, lambdax, lambday)
 {
 	(lambday*z-lambdax)/sqrt(lambday*z^2+lambdax)
@@ -141,6 +147,7 @@ cnv.ANNO <- function(cnv.sub, anno.last, step, minimum.window, threshold)
 	cnv.sub
 }
 
+# print cnv table
 cnv.print <- function(cnv, file="")
 {
 	cat('cnv', 'chromosome', 'start', 'end', 'size', 'log2', 'p.value', sep="\t", file=file,fill=TRUE, append=TRUE)
@@ -153,6 +160,7 @@ cnv.print <- function(cnv, file="")
 	}
 }
 
+# print summary of copy number ratios
 cnv.summary <- function(cnv)
 {
 	true <- subset(cnv, cnv>0)
@@ -175,6 +183,7 @@ cnv.summary <- function(cnv)
 	cat('Min Size:', min.size, fill=TRUE)
 }
 
+# plots either all chromosomes or specific chromosome
 plot.cnv <- function(data, chromosome=NA, CNV=NA, ...)
 {
 	if(!is.na(CNV))
@@ -187,6 +196,7 @@ plot.cnv <- function(data, chromosome=NA, CNV=NA, ...)
 	}
 } 
 
+# plot all chromosomes cnv present in genome
 plot.cnv.all <- function(data, chrom.gap=2e7, colour=5, title=NA, ylim=c(-2,2), xlabel='Chromosome')
 {
 	if(nrow(subset(data, log2>max(ylim) | log2<min(ylim)))>0) warning('missed some data points due to small ylim range')
@@ -220,6 +230,7 @@ plot.cnv.all <- function(data, chrom.gap=2e7, colour=5, title=NA, ylim=c(-2,2), 
 	p
 }
 
+# plot specific chromosome cnv
 plot.cnv.chr <- function(data, chromosome=NA, from=NA, to=NA, title=NA, ylim=c(-4,4), glim=c(NA,NA), xlabel='Position (bp)')
 {
 	chrom.name <- chromosome
@@ -242,6 +253,7 @@ plot.cnv.chr <- function(data, chromosome=NA, from=NA, to=NA, title=NA, ylim=c(-
 	p
 }
 
+# plot cnv per chromosome
 plot.cnv.cnv <- function(data, CNV, upstream=NA, downstream=NA, ...)
 {
 	sub <- subset(data, cnv==CNV)

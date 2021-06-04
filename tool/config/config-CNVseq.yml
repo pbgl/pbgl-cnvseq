@@ -1,3 +1,12 @@
+# parameters for CNV/window size calculations (defaults are shown)
+parameters:
+  annotate: TRUE
+  bed_file_present: FALSE
+  bigger: 1.5
+  log2: 0.6
+  pvalue: 0.001
+  window_size: 10000
+  
 # paths to bam files
 paths:
   control-1: &control-1 /path/to/bam/file/control-1.bam
@@ -17,13 +26,8 @@ comparisons:
     mutant: *mutant-2
 
 # list of chromosomes to be analyzed
-chromosomes: Chromosome1, Chromosome2, Chromosome3, AnotherChromosome
-
-# parameters for CNV/window size calculations (defaults are shown)
-parameters:
-  annotate: TRUE
-  bed_file: FALSE
-  bigger: 1.5
-  log2: 0.6
-  pvalue: 0.001
-  window_size: 10000
+chromosomes: 
+  - Chromosome1 
+  - Chromosome2 
+  - Chromosome3     
+  - AnotherChromosome             
