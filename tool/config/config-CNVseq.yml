@@ -1,4 +1,5 @@
-# parameters for CNV/window size calculations (defaults are shown)
+# parameters for CNV/window size calculations defaults from HLiang:
+# https://github.com/hliang/cnv-seq
 parameters:
   annotate: TRUE
   bed_file_present: FALSE
@@ -6,15 +7,26 @@ parameters:
   log2: 0.6
   pvalue: 0.001
   window_size: 10000
+
+# list of chromosomes to be analyzed
+chromosomes: 
+  - Chromosome1 
+  - Chromosome2 
+  - Chromosome3     
+  - AnotherChromosome
+
+# folder to store outputs; should be inside "output" directory, example:
+# output_path: output/run-name or output/organism
+output_path: output/organism-being-analyzed
+  
+# path to bed file for varying window sizes (optional)
+bed_path: /path/to/bed/file.bed
   
 # paths to bam files
 paths:
   control-1: &control-1 /path/to/bam/file/control-1.bam
   mutant-1: &mutant-1 /path/to/bam/file/mutant-1.bam
   mutant-2: &mutant-2 /path/to/bam/file/mutant-2.bam
-
-# path to bed file for varying window sizes (optional)
-bed_path: /path/to/bed/file.bed
 
 # comparisons to be analyzed
 comparisons:
@@ -24,10 +36,3 @@ comparisons:
   control-1-vs-mutant-2:
     control: *control-1
     mutant: *mutant-2
-
-# list of chromosomes to be analyzed
-chromosomes: 
-  - Chromosome1 
-  - Chromosome2 
-  - Chromosome3     
-  - AnotherChromosome             

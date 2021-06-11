@@ -1,9 +1,17 @@
-name: cnv-seq
+name: cnvseq
+
 channels:
   - defaults
   - bioconda
   - conda-forge
   - r
+  - pcgr
+
 dependencies:
   - notebook
   - r-irkernel
+  - r-ggplot2
+  - r-biocmanager
+  - bioconductor-genomicalignments
+  - bioconductor-genomeinfodb
+  - r-configr
