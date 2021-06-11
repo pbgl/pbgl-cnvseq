@@ -246,9 +246,12 @@ cnvCalculate <- function(config){
 cnvPlot <- function(config, imgType="png", yMin=-5, yMax=5){
     # create output directory to store images/tab-files
     output_path <- config$output_path
+    dir.create(output_path)
+    
     output_path_tab <- paste(output_path, "/tab-files", sep="")
-    output_path_img <- paste(output_path, "/images", sep="")
     dir.create(output_path_tab)
+    
+    output_path_img <- paste(output_path, "/images", sep="")
     dir.create(output_path_img)
     
     # store comparisons to be done
