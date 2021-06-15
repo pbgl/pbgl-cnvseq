@@ -219,10 +219,10 @@ cnvCalculate <- function(config){
 
         # create tabulated file with dataframe
         if (bed_file) {
-            hitsPath <- paste(output_path, "tab-files/", comparison, "-all-hits-captures-BED.tab", sep="")
+            hitsPath <- paste(output_path, "/tab-files/", comparison, "-all-hits-captures-BED.tab", sep="")
             hitsFile <- as.countsfile(hitsChrSubset, hitsPath)
         } else {
-            hitsPath <- paste(output_path, "tab-files/", comparison, "-window-", window_size, "-all-hits.tab", sep="")
+            hitsPath <- paste(output_path, "/tab-files/", comparison, "-window-", window_size, "-all-hits.tab", sep="")
             hitsFile <- as.countsfile(hitsChrSubset, hitsPath)
         }
 
@@ -235,7 +235,7 @@ cnvCalculate <- function(config){
         cnv.summary(cnv)
 
         # save all considered CNVs calculated by cnv.cal( ) function and print
-        cnvFile <- paste(output_path, "tab-files/", comparison, "-all-chroms-CNVs.tab", sep="")
+        cnvFile <- paste(output_path, "/tab-files/", comparison, "-all-chroms-CNVs.tab", sep="")
         cnv.print(cnv, file=cnvFile)
         cat("\n")
         cnv.print(cnv)
@@ -289,9 +289,9 @@ cnvPlot <- function(config, imgType="png", yMin=-5, yMax=5){
     for (comparison in comparisonNames){
         # tabulated file with dataframe
         if (bed_file) {
-            hitsFile <- paste(output_path, "tab-files/", comparison, "-all-hits-captures-BED.tab", sep="")
+            hitsFile <- paste(output_path, "/tab-files/", comparison, "-all-hits-captures-BED.tab", sep="")
         } else {
-            hitsFile <- paste(output_path, "tab-files/", comparison, "-window-", window_size, "-all-hits.tab", sep="")
+            hitsFile <- paste(output_path, "/tab-files/", comparison, "-window-", window_size, "-all-hits.tab", sep="")
         }
         
         # calculate Copy Number Variations (CNVs)
@@ -299,14 +299,14 @@ cnvPlot <- function(config, imgType="png", yMin=-5, yMax=5){
         
         # path to save images
         if (bed_file) {
-            imagePath <- paste(output_path, "images/", comparison, "-chromosome-all-captures-BED.", imgType, 
+            imagePath <- paste(output_path, "/images/", comparison, "-chromosome-all-captures-BED.", imgType, 
                              sep="")
             if (imgType == "png") {png(imagePath)}
             else if (imgType == "svg") {svg(imagePath)}
             else if (imgType == "jpeg") {jpeg(imagePath)}
             else if (imgType == "pdf") {pdf(imagePath)}
         } else {
-            imagePath <- paste(output_path, "images/", comparison, "-chromosome-all-window-", window_size, ".", imgType,
+            imagePath <- paste(output_path, "/images/", comparison, "-chromosome-all-window-", window_size, ".", imgType,
                              sep="")
             if (imgType == "png") {png(imagePath)}
             else if (imgType == "svg") {svg(imagePath)}
@@ -334,7 +334,7 @@ cnvPlot <- function(config, imgType="png", yMin=-5, yMax=5){
         for (chrom in chromosomes){
             # path to save images in png format
             if (bed_file) {
-                imagePath <- paste(output_path, "images/", comparison, 
+                imagePath <- paste(output_path, "/images/", comparison, 
                                  "-chromosome-", chrom, "-captures-BED.", imgType,
                                  sep="")
                 if (imgType == "png") {png(imagePath)}
