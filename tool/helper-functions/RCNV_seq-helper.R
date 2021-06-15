@@ -342,7 +342,7 @@ cnvPlot <- function(config, imgType="png", yMin=-5, yMax=5){
                 else if (imgType == "jpeg") {jpeg(imagePath)}
                 else if (imgType == "pdf") {pdf(imagePath)}
             } else {
-                imagePath <- paste(output_path, "images/", comparison, 
+                imagePath <- paste(output_path, "/images/", comparison, 
                                  "-chromosome-", chrom, "-window-", window_size, ".", imgType,
                                  sep="")
                 if (imgType == "png") {png(imagePath)}
