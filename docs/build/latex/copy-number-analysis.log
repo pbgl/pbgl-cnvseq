@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.3)  30 APR 2021 11:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.3)  21 JUN 2021 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1210,45 +1210,76 @@ LaTeX Font Info:    Try loading font information for TS1+ptm on input line 148.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [3
+)
+<terminal_base_env.png, id=113, 944.52875pt x 459.7175pt>
+File: terminal_base_env.png Graphic file (type png)
+<use terminal_base_env.png>
+Package pdftex.def Info: terminal_base_env.png  used on input line 167.
+(pdftex.def)             Requested size: 469.75546pt x 228.63762pt.
+<terminal_base_env_detail.png, id=115, 359.3425pt x 76.285pt>
+File: terminal_base_env_detail.png Graphic file (type png)
+<use terminal_base_env_detail.png>
+Package pdftex.def Info: terminal_base_env_detail.png  used on input line 173.
+(pdftex.def)             Requested size: 359.34161pt x 76.2848pt.
+ [3
 
-] [4] [5
+ <./terminal_base_env.png> <./terminal_base_env_detail.png>]
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 216.
 
-] [6
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+) [4] [5]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 437.
+ [6
+
+] [7]
+[8] [9]
+Overfull \hbox (3.85034pt too wide) in paragraph at lines 804--806
+[]\T1/ptm/m/n/10 out-put tab-u-lated files are stored in-side \T1/ptm/b/n/10 pb
+gl-cnvseq/tool/output/name_defined_in_output_path_of_config/tab-
+ []
+
+
+Overfull \hbox (3.49036pt too wide) in paragraph at lines 856--858
+[]\T1/ptm/m/n/10 out-put im-ages are stored in-side the \T1/ptm/b/n/10 pbgl-cnv
+seq/tool/output/name_defined_in_output_path_of_config/images
+ []
+
+[10] [11] (./copy-number-analysis.ind)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 982.
+ [12
 
 ]
-[7] [8
-
-] (./copy-number-analysis.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 617.
- [9
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 617.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 982.
  (./copy-number-analysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 617.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 617.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 982.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 982.
 Package rerunfilecheck Info: File `copy-number-analysis.out' has not changed.
-(rerunfilecheck)             Checksum: 417E9ADEBBA6BA8A86F123E5FC4D8870;1815.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 617.
+(rerunfilecheck)             Checksum: 1084A661AD6FE4BD4803C878C45F14F3;3644.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 982.
  ) 
 Here is how much of TeX's memory you used:
- 13799 strings out of 492982
- 191897 string characters out of 6134896
- 292600 words of memory out of 5000000
- 17042 multiletter control sequences out of 15000+600000
- 45319 words of font info for 53 fonts, out of 8000000 for 9000
+ 13866 strings out of 492982
+ 193214 string characters out of 6134896
+ 308111 words of memory out of 5000000
+ 17084 multiletter control sequences out of 15000+600000
+ 49393 words of font info for 59 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 37i,11n,45p,844b,469s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,11n,45p,844b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on copy-number-analysis.pdf (10 pages, 93997 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/courier/ucrro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/u
+hvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on copy-number-analysis.pdf (13 pages, 153118 bytes).
 PDF statistics:
- 150 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 

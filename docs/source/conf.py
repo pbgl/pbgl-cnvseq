@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'copy-number-analysis'
+project = 'pbgl-cnvseq'
 copyright = '2021, H. Liang, Bioconductor, Anibal E. Morales'
 author = 'Anibal Morales, IAEA PBGL - UN FAO'
 

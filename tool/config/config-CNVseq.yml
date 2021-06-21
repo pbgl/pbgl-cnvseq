@@ -18,10 +18,10 @@ chromosomes:
 # folder to store outputs; should be inside "output" directory, example:
 # output_path: output/run-name or output/organism
 output_path: output/organism-being-analyzed
-  
+
 # path to bed file for varying window sizes (optional)
 bed_path: /path/to/bed/file.bed
-  
+
 # paths to bam files
 paths:
   control-1: &control-1 /path/to/bam/file/control-1.bam

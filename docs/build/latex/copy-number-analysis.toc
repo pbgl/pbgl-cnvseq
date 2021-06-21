@@ -1,12 +1,18 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {1}Background}{2}{section.1}
-\contentsline {section}{\numberline {2}Installations}{3}{section.2}
-\contentsline {subsection}{\numberline {2.1}Miniconda3 (conda)}{3}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Git with conda}{3}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Required Libraries with conda}{3}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}Automatically (slower)}{4}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}Manually (faster)}{4}{subsubsection.2.3.2}
-\contentsline {section}{\numberline {3}Running a Jupyter Notebook}{5}{section.3}
-\contentsline {section}{\numberline {4}Editing the Configuration File}{6}{section.4}
-\contentsline {section}{\numberline {5}Running the RCNV\_seq\sphinxhyphen {}template Jupyter Notebook}{8}{section.5}
-\contentsline {section}{\numberline {6}References}{9}{section.6}
+\contentsline {section}{\numberline {2}Installations \sphinxhyphen {} Virtual Environments and Software Packages}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Miniconda3 (conda) and Mamba}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Git Installation and Repo Cloning}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Required Libraries with Mamba}{4}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}Automatically (faster)}{5}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}Manually (slower)}{5}{subsubsection.2.3.2}
+\contentsline {section}{\numberline {3}Running Jupyter}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Editing the Configuration File}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Running a RCNV\_seq\sphinxhyphen {}template Jupyter Notebook}{9}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}1 \sphinxhyphen {} Installing Required Libraries (optional)}{9}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}2 \sphinxhyphen {} Loading Required Libraries (mandatory)}{9}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}3 \sphinxhyphen {} User Input (mandatory)}{10}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}4 \sphinxhyphen {} CNV Calculations}{10}{subsubsection.3.2.4}
+\contentsline {subsubsection}{\numberline {3.2.5}5 \sphinxhyphen {} Plotting}{10}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.6}6 \sphinxhyphen {} Plotting a Zoomed\sphinxhyphen {}In Region of One Chromosome}{11}{subsubsection.3.2.6}
+\contentsline {section}{\numberline {4}References}{12}{section.4}

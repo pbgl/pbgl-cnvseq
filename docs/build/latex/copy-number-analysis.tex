@@ -73,7 +73,7 @@
 
 
 \title{copy\sphinxhyphen{}number\sphinxhyphen{}analysis}
-\date{Apr 30, 2021}
+\date{Jun 21, 2021}
 \release{1.0}
 \author{Anibal Morales, IAEA PBGL \sphinxhyphen{} UN FAO}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -100,7 +100,7 @@
 	    \vspace{10mm}
             \normalsize Created: March, 2021\\
             \vspace*{0mm}
-            \normalsize  Last updated: 30 April 2021
+            \normalsize  Last updated: 04 June 2021
             %% \vfill adds at the bottom
             \vfill
             \small\flushleft {{\textbf {Please note:}} \textit {This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views
@@ -119,10 +119,10 @@ expressed do not necessarily reflect those of the International Atomic Energy Ag
 \section{Background}
 \label{\detokenize{index:background}}
 \sphinxAtStartPar
-\sphinxstylestrong{{[}DRAFT{]}}
+\sphinxstylestrong{{[}WORKING DRAFT{]}}
 
 \sphinxAtStartPar
-Copy number variation (CNV) analysis using CNV\sphinxhyphen{}seq, R, Jupyter Notebooks, Miniconda3, and Git.
+Copy number variation (CNV) analysis using CNVseq, R, Jupyter Notebooks, Miniconda3, Mamba, and Git.
 
 \begin{sphinxadmonition}{note}{Note:}
 \sphinxAtStartPar
@@ -130,8 +130,8 @@ This is not an official IAEA publication but is made available as working materi
 \end{sphinxadmonition}
 
 
-\section{Installations}
-\label{\detokenize{index:installations}}
+\section{Installations \sphinxhyphen{} Virtual Environments and Software Packages}
+\label{\detokenize{index:installations-virtual-environments-and-software-packages}}
 \sphinxAtStartPar
 Before installing any necessary software, it is recommended to check if the computer is running 32\sphinxhyphen{}bit or 64\sphinxhyphen{}bit for downloading Miniconda3. Run the following to verify the system:
 
@@ -140,8 +140,8 @@ Before installing any necessary software, it is recommended to check if the comp
 \end{sphinxVerbatim}
 
 
-\subsection{Miniconda3 (conda)}
-\label{\detokenize{index:miniconda3-conda}}
+\subsection{Miniconda3 (conda) and Mamba}
+\label{\detokenize{index:miniconda3-conda-and-mamba}}
 \sphinxAtStartPar
 Download the Miniconda3, or simply “conda”, installer:
 \begin{itemize}
@@ -159,51 +159,88 @@ Run the downloaded installer (for a 64\sphinxhyphen{}bit system):
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Open a new terminal window for conda to take effect. Verify the installation and update conda in new terminal window with:
+Open a new terminal window for conda to take effect. The word \sphinxtitleref{(base)} should appear in front of the computer name in the terminal window, like so:
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{terminal_base_env}.png}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+
+\noindent\sphinxincludegraphics{{terminal_base_env_detail}.png}
+\end{figure}
+
+\sphinxAtStartPar
+Verify the installation and update conda in new terminal window with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda list
-\PYGZdl{} conda update conda
+\PYGZdl{} conda env list
 \PYGZdl{} conda update \PYGZhy{}\PYGZhy{}all
 \PYGZdl{} conda upgrade \PYGZhy{}\PYGZhy{}all
 \end{sphinxVerbatim}
 
-
-\subsection{Git with conda}
-\label{\detokenize{index:git-with-conda}}
 \sphinxAtStartPar
-Git will be installed first to clone locally (download a copy to your local computer) the CNV\sphinxhyphen{}seq repository from GitHub. To do so, run the following:
+Install mamba library/package manager that will be used for installing software dependencies of the tool:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda install \PYGZhy{}c anaconda git
+\PYGZdl{} conda install mamba \PYGZhy{}\PYGZhy{}yes
+\end{sphinxVerbatim}
+
+
+\subsection{Git Installation and Repo Cloning}
+\label{\detokenize{index:git-installation-and-repo-cloning}}
+\sphinxAtStartPar
+Git is required for cloning locally (downloading a copy to your local computer) the PBGL CNVseq Github repository. Git and Github are used for version control of software. It keeps track of development, releases, and issues of a software project.
+
+\sphinxAtStartPar
+Install \sphinxstylestrong{git} for cloning the \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq} software repository from Github, where the latetest version of the tool resides:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZdl{} mamba install git \PYGZhy{}\PYGZhy{}yes
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-After the installation, clone the CNV\sphinxhyphen{}seq repository to the local computer in the desired directory.
+After the instalation, clone PBGL’s CNVseq repository, \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq}, to the local computer in any desired directory.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} git clone https://github.com/amora197/copy\PYGZhy{}number\PYGZhy{}analysis.git
+\PYGZdl{} git clone https://github.com/pbgl/pbgl\PYGZhy{}cnvseq.git
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Verify that the installation is complete by listing the files in the directory.
+The cloning process will depict the following:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{Cloning} \PYG{n}{into} \PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{pbgl\PYGZhy{}cnvseq}\PYG{l+s+s1}{\PYGZsq{}}\PYG{o}{.}\PYG{o}{.}\PYG{o}{.}
+\PYG{n}{remote}\PYG{p}{:} \PYG{n}{Enumerating} \PYG{n}{objects}\PYG{p}{:} \PYG{l+m+mi}{628}\PYG{p}{,} \PYG{n}{done}\PYG{o}{.}
+\PYG{n}{remote}\PYG{p}{:} \PYG{n}{Counting} \PYG{n}{objects}\PYG{p}{:} \PYG{l+m+mi}{100}\PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+m+mi}{336}\PYG{o}{/}\PYG{l+m+mi}{336}\PYG{p}{)}\PYG{p}{,} \PYG{n}{done}\PYG{o}{.}
+\PYG{n}{remote}\PYG{p}{:} \PYG{n}{Compressing} \PYG{n}{objects}\PYG{p}{:} \PYG{l+m+mi}{100}\PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+m+mi}{239}\PYG{o}{/}\PYG{l+m+mi}{239}\PYG{p}{)}\PYG{p}{,} \PYG{n}{done}\PYG{o}{.}
+\PYG{n}{remote}\PYG{p}{:} \PYG{n}{Total} \PYG{l+m+mi}{628} \PYG{p}{(}\PYG{n}{delta} \PYG{l+m+mi}{109}\PYG{p}{)}\PYG{p}{,} \PYG{n}{reused} \PYG{l+m+mi}{292} \PYG{p}{(}\PYG{n}{delta} \PYG{l+m+mi}{78}\PYG{p}{)}\PYG{p}{,} \PYG{n}{pack}\PYG{o}{\PYGZhy{}}\PYG{n}{reused} \PYG{l+m+mi}{292}
+\PYG{n}{Receiving} \PYG{n}{objects}\PYG{p}{:} \PYG{l+m+mi}{100}\PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+m+mi}{628}\PYG{o}{/}\PYG{l+m+mi}{628}\PYG{p}{)}\PYG{p}{,} \PYG{l+m+mf}{11.79} \PYG{n}{MiB} \PYG{o}{|} \PYG{l+m+mf}{7.03} \PYG{n}{MiB}\PYG{o}{/}\PYG{n}{s}\PYG{p}{,} \PYG{n}{done}\PYG{o}{.}
+\PYG{n}{Resolving} \PYG{n}{deltas}\PYG{p}{:} \PYG{l+m+mi}{100}\PYG{o}{\PYGZpc{}} \PYG{p}{(}\PYG{l+m+mi}{190}\PYG{o}{/}\PYG{l+m+mi}{190}\PYG{p}{)}\PYG{p}{,} \PYG{n}{done}\PYG{o}{.}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+The \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq} repository should have been clones successfully. Verify that the download is complete by listing the folders/files in the directory.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} ls \PYGZhy{}l
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-A folder called \sphinxstylestrong{copy\sphinxhyphen{}number\sphinxhyphen{}analysis} should be listed in the directory.
+The folder called \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq} should be listed in the directory.
 
 
-\subsection{Required Libraries with conda}
-\label{\detokenize{index:required-libraries-with-conda}}
+\subsection{Required Libraries with Mamba}
+\label{\detokenize{index:required-libraries-with-mamba}}
 \sphinxAtStartPar
-CNV\sphinxhyphen{}seq has multiple dependencies, listed below:
+CNVseq has multiple dependencies, listed below:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-Git
+Samtools
 
 \item {} 
 \sphinxAtStartPar
@@ -225,6 +262,10 @@ BiocManager
 \sphinxAtStartPar
 Bioconductor\sphinxhyphen{}GenomicAlignments
 
+\item {} 
+\sphinxAtStartPar
+Bioconductor\sphinxhyphen{}GenomeInfoDb
+
 \end{itemize}
 
 \item {} 
@@ -240,70 +281,61 @@ IRkernel
 \end{itemize}
 
 \sphinxAtStartPar
-There are two ways to install the rest of the necessary libraries to run CNV\sphinxhyphen{}seq: automatically or manually. The former is slower, providing a long coffee break while the conda installations run. The latter proves a faster way to get the tool up\sphinxhyphen{}and\sphinxhyphen{}running.
+The necessary R packages are installed through the Jupyter Notebook. It proves as a faster and error\sphinxhyphen{}free way to install \sphinxstylestrong{configr}, \sphinxstylestrong{ggplot2}, \sphinxstylestrong{Biocmanager}, \sphinxstylestrong{Bioconductor\sphinxhyphen{}GenomicAlignments}, and \sphinxstylestrong{Bioconductor\sphinxhyphen{}GenomeInfoDb} packages.
 
-
-\subsubsection{Automatically (slower)}
-\label{\detokenize{index:automatically-slower}}
 \sphinxAtStartPar
-Two YAML files, \sphinxstylestrong{environment.yml} and \sphinxstylestrong{libraries.yml}, are provided to automatically create a conda environment and install the dependent libraries. The former creates the conda environment, along R, Jupyter Notebook, and the R\sphinxhyphen{}kernel in Jupyter. The latter installs dependent R libraries. Run \sphinxstylestrong{environment.yml}:
+There are two ways to install the rest of the necessary libraries to run CNV\sphinxhyphen{}seq: automatically or manually.
+
+
+\subsubsection{Automatically (faster)}
+\label{\detokenize{index:automatically-faster}}
+\sphinxAtStartPar
+One YAML file, \sphinxstylestrong{environment.yml}, is provided to automatically create a virtual environment and install the dependent libraries through mamba. The file creates the \sphinxstylestrong{cnvseq} virtual environment, along R, Jupyter Notebook, and the R\sphinxhyphen{}kernel in Jupyter. It also installs the dependent R libraries. Run \sphinxstylestrong{environment.yml}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda env create \PYGZhy{}\PYGZhy{}file envs/environment.yml
+\PYGZdl{} mamba env create \PYGZhy{}\PYGZhy{}file envs/environment.yml
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Once done, the created environment can be verified running:
+Once done, a list of the virtual environments available can be seen by running:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} conda env list
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Activate the created environment (\sphinxstylestrong{cnv\sphinxhyphen{}seq}) and run \sphinxstylestrong{libraries.yml}:
+Activate (enter) the recently\sphinxhyphen{}created virtual environment \sphinxstylestrong{cnvseq}:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda activate cnv\PYGZhy{}seq
-\PYGZdl{} conda env update \PYGZhy{}\PYGZhy{}file envs/libraries.yml
+\PYGZdl{} conda activate cnvseq
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Once done, all the necessary packages should be installed. This can be verified with:
+Once done, the virtual environment should be activated and all the necessary packages should be installed. This can be verified with:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} conda list
 \end{sphinxVerbatim}
 
 
-\subsubsection{Manually (faster)}
-\label{\detokenize{index:manually-faster}}
+\subsubsection{Manually (slower)}
+\label{\detokenize{index:manually-slower}}
 \sphinxAtStartPar
 To manually create and activate an environment, run:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda create \PYGZhy{}\PYGZhy{}name cnv\PYGZhy{}seq
+\PYGZdl{} conda create \PYGZhy{}\PYGZhy{}name cnvseq
+\PYGZdl{} conda activate cnvseq
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-Once done, the created environment can be verified running:
+Start running the installations of the necessary libraries:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda env list
-\end{sphinxVerbatim}
-
-\sphinxAtStartPar
-Activate the virtual environment with:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda activate cnv\PYGZhy{}seq
-\end{sphinxVerbatim}
-
-\sphinxAtStartPar
-Start running the installations of the necessary libraries, paying attention to the prompts for each one:
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYGZdl{} conda install notebook
-\PYGZdl{} conda install r\PYGZhy{}irkernel
+\PYGZdl{} mamba install \PYGZhy{}\PYGZhy{}channel conda\PYGZhy{}forge notebook r\PYGZhy{}irkernel r\PYGZhy{}biocmanager \PYGZhy{}\PYGZhy{}yes
+\PYGZdl{} mamba install \PYGZhy{}\PYGZhy{}channel bioconda samtools bioconductor\PYGZhy{}genomicalignments bioconductor\PYGZhy{}genomeinfodb \PYGZhy{}\PYGZhy{}yes
+\PYGZdl{} mamba install \PYGZhy{}\PYGZhy{}channel r r\PYGZhy{}ggplot2 \PYGZhy{}\PYGZhy{}yes
+\PYGZdl{} mamba install \PYGZhy{}\PYGZhy{}channel pcgr r\PYGZhy{}configr \PYGZhy{}\PYGZhy{}yes
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
@@ -314,20 +346,20 @@ Once done, all the necessary packages should be installed. This can be verified 
 \end{sphinxVerbatim}
 
 
-\section{Running a Jupyter Notebook}
-\label{\detokenize{index:running-a-jupyter-notebook}}
+\section{Running Jupyter}
+\label{\detokenize{index:running-jupyter}}
 \sphinxAtStartPar
-To access the Jupyter Notebooks, run:
+To activate Jupyter, run the following in the terminal:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} jupyter notebook
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-This command will start a Jupyter Notebook session inside the directory the command is run. The user can navigate between directories, visualize files, and edit files in the browser by clicking on directories or files, respectively.
+This command will start a Jupyter session inside the directory the command is run. The user can navigate between directories, visualize files, and edit files in a web browser by clicking on directories or files, respectively.
 
 \sphinxAtStartPar
-Look for the directory \sphinxstylestrong{copy\sphinxhyphen{}number\sphinxhyphen{}analysis} and click on it. Click on \sphinxstylestrong{jupyter\sphinxhyphen{}notebooks} directory, which contains four directories and two Jupyter Notebooks. Here is a breakdown of each:
+Look for the directory \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq} and click on it. Click on \sphinxstylestrong{tool} directory, which contains three directories and two Jupyter Notebooks. Here is a breakdown of each:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -335,7 +367,7 @@ Look for the directory \sphinxstylestrong{copy\sphinxhyphen{}number\sphinxhyphen
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-directory containing configuration files
+directory containing configuration files specifying file paths, parameter definitions, and comparison lists
 
 \end{itemize}
 
@@ -351,31 +383,11 @@ directory containing R scripts with functions to calculate and plot CNVs
 
 \item {} 
 \sphinxAtStartPar
-\sphinxtitleref{images}:
+\sphinxtitleref{output}:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-directory that will contain output CNV plots after running CNV\sphinxhyphen{}seq
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxtitleref{tab\sphinxhyphen{}files}:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-directory that will contain two types of output tab\sphinxhyphen{}delimited files:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-hits used to calculate CNVs
-
-\item {} 
-\sphinxAtStartPar
-CNVs per chromosome per comparison
-
-\end{itemize}
+directory that will contain both tab\sphinxhyphen{}files and images output after running a CNVseq analysis
 
 \end{itemize}
 
@@ -385,11 +397,11 @@ two Jupyter Notebooks:
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-RCNV\sphinxhyphen{}seq\sphinxhyphen{}example.ipynb
+RCNV\sphinxhyphen{}seq\sphinxhyphen{}sorghum\sphinxhyphen{}example.ipynb
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-example analysis of sorghum
+example analysis of a comparison between a control and mutant of sorghum
 
 \end{itemize}
 
@@ -413,13 +425,54 @@ Jupyter lets the user duplicate, rename, move, download, view, or edit files in 
 \end{sphinxadmonition}
 
 
-\section{Editing the Configuration File}
+\subsection{Editing the Configuration File}
 \label{\detokenize{index:editing-the-configuration-file}}
 \sphinxAtStartPar
-In order to run the CNV\sphinxhyphen{}seq Jupyter Notebook, the user needs to feed it with a configuration file (\sphinxstylestrong{config\sphinxhyphen{}CNVseq.yml}) that specifies the paths to the bam files, comparisons to be done, chromosomes to analyze, and parameter definitions for calculating and plotting CNVs.
+In order to run the CNVseq Jupyter Notebook, the user needs to feed it with a configuration file (\sphinxstylestrong{config\sphinxhyphen{}CNVseq.yml}) that specifies the paths to the bam files, comparisons to be done, chromosomes to analyze, and parameter definitions for calculating and plotting CNVs.
 
 \sphinxAtStartPar
-The configuration file \sphinxstylestrong{config\sphinxhyphen{}CNVseq.yml} can be found in the \sphinxstylestrong{copy\sphinxhyphen{}number\sphinxhyphen{}analysis/jupyter\sphinxhyphen{}notebooks/config} directory.
+The configuration file \sphinxstylestrong{config\sphinxhyphen{}CNVseq.yml} can be found in the \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq/tool/config} directory. The configuration file contains the following:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} parameters for CNV/window size calculations defaults from HLiang:}
+\PYG{c+c1}{\PYGZsh{} https://github.com/hliang/cnv\PYGZhy{}seq}
+\PYG{n}{parameters}\PYG{p}{:}
+  \PYG{n}{annotate}\PYG{p}{:} \PYG{n}{TRUE}
+  \PYG{n}{bed\PYGZus{}file\PYGZus{}present}\PYG{p}{:} \PYG{n}{FALSE}
+  \PYG{n}{bigger}\PYG{p}{:} \PYG{l+m+mf}{1.5}
+  \PYG{n}{log2}\PYG{p}{:} \PYG{l+m+mf}{0.6}
+  \PYG{n}{pvalue}\PYG{p}{:} \PYG{l+m+mf}{0.001}
+  \PYG{n}{window\PYGZus{}size}\PYG{p}{:} \PYG{l+m+mi}{10000}
+
+\PYG{c+c1}{\PYGZsh{} list of chromosomes to be analyzed}
+\PYG{n}{chromosomes}\PYG{p}{:}
+  \PYG{o}{\PYGZhy{}} \PYG{n}{Chromosome1}
+  \PYG{o}{\PYGZhy{}} \PYG{n}{Chromosome2}
+  \PYG{o}{\PYGZhy{}} \PYG{n}{Chromosome3}
+  \PYG{o}{\PYGZhy{}} \PYG{n}{AnotherChromosome}
+
+\PYG{c+c1}{\PYGZsh{} folder to store outputs; should be inside \PYGZdq{}output\PYGZdq{} directory, example:}
+\PYG{c+c1}{\PYGZsh{} output\PYGZus{}path: output/run\PYGZhy{}name or output/organism}
+\PYG{n}{output\PYGZus{}path}\PYG{p}{:} \PYG{n}{output}\PYG{o}{/}\PYG{n}{organism}\PYG{o}{\PYGZhy{}}\PYG{n}{being}\PYG{o}{\PYGZhy{}}\PYG{n}{analyzed}
+
+\PYG{c+c1}{\PYGZsh{} path to bed file for varying window sizes (optional)}
+\PYG{n}{bed\PYGZus{}path}\PYG{p}{:} \PYG{o}{/}\PYG{n}{path}\PYG{o}{/}\PYG{n}{to}\PYG{o}{/}\PYG{n}{bed}\PYG{o}{/}\PYG{n}{file}\PYG{o}{.}\PYG{n}{bed}
+
+\PYG{c+c1}{\PYGZsh{} paths to bam files}
+\PYG{n}{paths}\PYG{p}{:}
+  \PYG{n}{control}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{control}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{/}\PYG{n}{path}\PYG{o}{/}\PYG{n}{to}\PYG{o}{/}\PYG{n}{bam}\PYG{o}{/}\PYG{n}{file}\PYG{o}{/}\PYG{n}{control}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.}\PYG{n}{bam}
+  \PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1} \PYG{o}{/}\PYG{n}{path}\PYG{o}{/}\PYG{n}{to}\PYG{o}{/}\PYG{n}{bam}\PYG{o}{/}\PYG{n}{file}\PYG{o}{/}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.}\PYG{n}{bam}
+  \PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2} \PYG{o}{/}\PYG{n}{path}\PYG{o}{/}\PYG{n}{to}\PYG{o}{/}\PYG{n}{bam}\PYG{o}{/}\PYG{n}{file}\PYG{o}{/}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.}\PYG{n}{bam}
+
+\PYG{c+c1}{\PYGZsh{} comparisons to be analyzed}
+\PYG{n}{comparisons}\PYG{p}{:}
+  \PYG{n}{control}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{n}{vs}\PYG{o}{\PYGZhy{}}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{:}
+    \PYG{n}{control}\PYG{p}{:} \PYG{o}{*}\PYG{n}{control}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+    \PYG{n}{mutant}\PYG{p}{:} \PYG{o}{*}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+  \PYG{n}{control}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{n}{vs}\PYG{o}{\PYGZhy{}}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}\PYG{p}{:}
+    \PYG{n}{control}\PYG{p}{:} \PYG{o}{*}\PYG{n}{control}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}
+    \PYG{n}{mutant}\PYG{p}{:} \PYG{o}{*}\PYG{n}{mutant}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{2}
+\end{sphinxVerbatim}
 
 \begin{sphinxadmonition}{note}{Note:}
 \sphinxAtStartPar
@@ -427,8 +480,116 @@ The user needs to edit \sphinxstylestrong{config\sphinxhyphen{}CNVseq.yml} to po
 \end{sphinxadmonition}
 
 \sphinxAtStartPar
-Two example configuration files are provided (\sphinxstylestrong{example1\sphinxhyphen{}config\sphinxhyphen{}CNVseq\sphinxhyphen{}coffee.yml} and \sphinxstylestrong{example2\sphinxhyphen{}config\sphinxhyphen{}CNVseq\sphinxhyphen{}sorghum.yml}). The configuration file \sphinxstylestrong{config\sphinxhyphen{}CNVseq.yml} contains multiple parameters to be defined by the user:
+One example configuration files is provided (\sphinxstylestrong{config\sphinxhyphen{}CNVseq\sphinxhyphen{}sorghum\sphinxhyphen{}example.yml}). The configuration file \sphinxstylestrong{config\sphinxhyphen{}CNVseq.yml} contains multiple fields to be defined by the user.
 \begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{parameters}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+parameters used to create window sizes, thresholds, plots, etc
+
+\item {} 
+\sphinxAtStartPar
+the parameter defaults are provided accroding to HLiang’s original values
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{chromosomes}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+list of chromosome names to analyze
+
+\item {} 
+\sphinxAtStartPar
+chromosome names can be found in a bam file’s header using the following samtools command:
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYGZdl{} samtools view \PYGZhy{}h my\PYGZus{}bam\PYGZus{}file.bam | less \PYGZhy{}S
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{output\_path}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+directory that will contain both tab\sphinxhyphen{}files and images output after running a CNVseq analysis
+
+\item {} 
+\sphinxAtStartPar
+the defined path will be inside the \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq/tool/output} directory
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{images}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+directory that will store the CNV image outputs per comparison of:
+
+\item {} 
+\sphinxAtStartPar
+all chromosomes in one plot
+
+\item {} 
+\sphinxAtStartPar
+each chromosome individually in one plot
+
+\item {} 
+\sphinxAtStartPar
+any zoomed\sphinxhyphen{}in region plot of one chromosome
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{tab\sphinxhyphen{}files}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+directory that will contain two types of output tab\sphinxhyphen{}delimited files:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+hits used to calculate CNVs, containing chromosome, start, end, width, control coverage, mutant coverage
+
+\item {} 
+\sphinxAtStartPar
+CNVs per chromosome per comparison, containing CNV number, chromosome, start, end, size, log2, and p\sphinxhyphen{}value
+
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{bed\_path}:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+path pointing to bed file containing targets if using varying window sizes
+
+\item {} 
+\sphinxAtStartPar
+it is recommended to run the analysis without a \sphinxstylestrong{.bed} file; plots will only reflect the targets in a \sphinxstylestrong{.bed} file
+
+\item {} 
+\sphinxAtStartPar
+if a \sphinxstylestrong{.bed} file is provided, the \sphinxtitleref{bed\_file\_present} parameter under the \sphinxtitleref{parameters} section has to be changed to \sphinxtitleref{TRUE}
+
+\end{itemize}
+
 \item {} 
 \sphinxAtStartPar
 \sphinxtitleref{paths}:
@@ -455,21 +616,11 @@ example use:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n}{paths}\PYG{p}{:}
-  \PYG{n}{mysample}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{mysample} \PYG{o}{/}\PYG{n}{home}\PYG{o}{/}\PYG{n}{john}\PYG{o}{/}\PYG{n}{bam\PYGZus{}files}\PYG{o}{/}\PYG{n}{mysample}\PYG{o}{.}\PYG{n}{bam}
-  \PYG{n}{XYZ}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{123}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{XYZ}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{123} \PYG{o}{/}\PYG{n}{home}\PYG{o}{/}\PYG{n}{john}\PYG{o}{/}\PYG{n}{bam\PYGZus{}files}\PYG{o}{/}\PYG{n}{XYZ}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{123.}\PYG{n}{bam}
-  \PYG{n}{potato95}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{potato95} \PYG{o}{/}\PYG{n}{home}\PYG{o}{/}\PYG{n}{john}\PYG{o}{/}\PYG{n}{bam\PYGZus{}files}\PYG{o}{/}\PYG{n}{potato95}\PYG{o}{.}\PYG{n}{bam}
+  \PYG{n}{mysample}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{mysample} \PYG{o}{/}\PYG{n}{home}\PYG{o}{/}\PYG{n}{username}\PYG{o}{/}\PYG{n}{bam\PYGZus{}files}\PYG{o}{/}\PYG{n}{mysample}\PYG{o}{.}\PYG{n}{bam}
+  \PYG{n}{XYZ}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{123}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{XYZ}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{123} \PYG{o}{/}\PYG{n}{home}\PYG{o}{/}\PYG{n}{username}\PYG{o}{/}\PYG{n}{bam\PYGZus{}files}\PYG{o}{/}\PYG{n}{XYZ}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{123.}\PYG{n}{bam}
+  \PYG{n}{potato95}\PYG{p}{:} \PYG{o}{\PYGZam{}}\PYG{n}{potato95} \PYG{o}{/}\PYG{n}{home}\PYG{o}{/}\PYG{n}{username}\PYG{o}{/}\PYG{n}{bam\PYGZus{}files}\PYG{o}{/}\PYG{n}{potato95}\PYG{o}{.}\PYG{n}{bam}
 \end{sphinxVerbatim}
 \begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\sphinxtitleref{bed\_path}:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-path to bed file if using varying window sizes
-
-\end{itemize}
-
 \item {} 
 \sphinxAtStartPar
 \sphinxtitleref{comparisons}:
@@ -507,79 +658,289 @@ example:
     \PYG{n}{control}\PYG{p}{:} \PYG{o}{*}\PYG{n}{mysample}
     \PYG{n}{mutant}\PYG{p}{:} \PYG{o}{*}\PYG{n}{XYZ}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{123}
 \end{sphinxVerbatim}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-\sphinxtitleref{chromosomes}:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-list of chromosome names to analyze separated by commas
-
-\item {} 
-\sphinxAtStartPar
-chromosome names can be extracted from a bam file’s header
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxtitleref{parameters}:
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-parameters used to create window sizes, thresholds, and plots
-
-\item {} 
-\sphinxAtStartPar
-the parameter defaults are provided
-
-\end{itemize}
-
-\end{itemize}
 
 
-\section{Running the RCNV\_seq\sphinxhyphen{}template Jupyter Notebook}
-\label{\detokenize{index:running-the-rcnv-seq-template-jupyter-notebook}}
+\subsection{Running a RCNV\_seq\sphinxhyphen{}template Jupyter Notebook}
+\label{\detokenize{index:running-a-rcnv-seq-template-jupyter-notebook}}
 \begin{sphinxadmonition}{note}{Note:}
 \sphinxAtStartPar
 It is recommended to duplicate the \sphinxstylestrong{RCNV\sphinxhyphen{}seq\sphinxhyphen{}template} notebook and then renaming the copy before doing any edits to the notebook.
 \end{sphinxadmonition}
 
 \sphinxAtStartPar
-In the \sphinxstylestrong{copy\sphinxhyphen{}number\sphinxhyphen{}analysis/jupyter\sphinxhyphen{}notebooks} directory, click on \sphinxstylestrong{RCNV\sphinxhyphen{}seq\sphinxhyphen{}template} and a new tab will open the notebook.
+In the \sphinxstylestrong{pbgl\sphinxhyphen{}cvnseq/tool} directory, click on \sphinxstylestrong{RCNV\sphinxhyphen{}seq\sphinxhyphen{}template} and a new tab in your web\sphinxhyphen{}browser will open the notebook.
 
 \sphinxAtStartPar
-The notebook contains cells that are populated by text or code. Instructions are provided in the notebook to guide the user.
+The notebook contains cells that are populated by text or code. Instructions are provided in the notebook to guide the user. To run a cell, click on the corresponding cell and click on the \sphinxtitleref{Run} button on the top of the notebook. Another way to run a cell can be done by clicking on the corresponding cell and pressing \sphinxstylestrong{Ctrl + Enter} or \sphinxstylestrong{Shift + Enter}.
 
 \sphinxAtStartPar
-The notebook consists of 5 sections:
+The notebook consists of 6 sections:
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
 \sphinxAtStartPar
-User Input (MANDATORY)
+Installing Required Libraries (optional)
 
 \item {} 
 \sphinxAtStartPar
-Installing Required R Libraries (mandatory only first time)
+Loading Required Libraries (mandatory)
 
 \item {} 
 \sphinxAtStartPar
-Loading Required Libraries (MANDATORY)
+User Input (mandatory)
 
 \item {} 
 \sphinxAtStartPar
-CNV Calculations and Plotting (MANDATORY)
+CNV Calculations
 
 \item {} 
 \sphinxAtStartPar
-Plotting Specific Window of One Chromosome (optional)
+Plotting
+
+\item {} 
+\sphinxAtStartPar
+Plotting a Zoomed\sphinxhyphen{}In Region of One Chromosome
 
 \end{enumerate}
 
+
+\subsubsection{1 \sphinxhyphen{} Installing Required Libraries (optional)}
+\label{\detokenize{index:installing-required-libraries-optional}}\begin{itemize}
+\item {} 
 \sphinxAtStartPar
-To run a cell, click on the corresponding cell and press \sphinxstylestrong{Ctrl + Enter} or \sphinxstylestrong{Shift + Enter}.
+libraries being installed:
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+In [ ]: \PYGZsh{} install necessary libraries using R functions
+        if (!requireNamespace(\PYGZdq{}BiocManager\PYGZdq{}, quietly = TRUE))
+            install.packages(\PYGZdq{}BiocManager\PYGZdq{})
+
+        BiocManager::install(c(\PYGZdq{}GenomicAlignments\PYGZdq{}, \PYGZdq{}GenomeInfoDb\PYGZdq{}))
+        install.packages(\PYGZdq{}configr\PYGZdq{})
+        install.packages(\PYGZdq{}ggplot2\PYGZdq{})
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+to be run if the mamba installations were not successful or the loading of the required libraries fails under the \sphinxstylestrong{Loading Required Libraries} section
+
+\end{itemize}
+
+
+\subsubsection{2 \sphinxhyphen{} Loading Required Libraries (mandatory)}
+\label{\detokenize{index:loading-required-libraries-mandatory}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+libraries being loaded:
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{c+c1}{\PYGZsh{} load necessary libraries}
+        \PYG{n}{library}\PYG{p}{(}\PYG{n}{GenomicAlignments}\PYG{p}{)}
+        \PYG{n}{library}\PYG{p}{(}\PYG{n}{ggplot2}\PYG{p}{)}
+        \PYG{n}{library}\PYG{p}{(}\PYG{n}{configr}\PYG{p}{)}
+
+        \PYG{c+c1}{\PYGZsh{} specify source R script with helper functions}
+        \PYG{n}{source}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{helper\PYGZhy{}functions/RCNV\PYGZus{}seq\PYGZhy{}helper.R}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+        \PYG{n}{source}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{helper\PYGZhy{}functions/cnvHLiang.R}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+this cell will load necessary libraries and scripts containing the necessary functions to be used
+
+\item {} 
+\sphinxAtStartPar
+if running this cell fails, some libraries may be missing from the installation
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+to fix this issue, run the installations under the \sphinxstylestrong{Installing Required Libraries}
+
+\end{itemize}
+
+\end{itemize}
+
+
+\subsubsection{3 \sphinxhyphen{} User Input (mandatory)}
+\label{\detokenize{index:user-input-mandatory}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the user needs to write the appropriate name of the configuration file being used in the following cell:
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{configPath} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZhy{}} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{config/config\PYGZhy{}CNVseq.yml}\PYG{l+s+s2}{\PYGZdq{}}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+the bottom cell will extract the fields defined in the configuration file:
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{config} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZhy{}} \PYG{n}{read}\PYG{o}{.}\PYG{n}{config}\PYG{p}{(}\PYG{n}{configPath}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+
+\subsubsection{4 \sphinxhyphen{} CNV Calculations}
+\label{\detokenize{index:cnv-calculations}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+function to calculate all the hits and CNVs:
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{cnvCalculate}\PYG{p}{(}\PYG{n}{config}\PYG{p}{)}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+output tabulated files are stored inside \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq/tool/output/name\_defined\_in\_output\_path\_of\_config/tab\sphinxhyphen{}files} directory
+
+\end{itemize}
+
+
+\subsubsection{5 \sphinxhyphen{} Plotting}
+\label{\detokenize{index:plotting}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+function to plot two types of images:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+CNVs of all chromosomes in the same plot
+
+\item {} 
+\sphinxAtStartPar
+CNVs of one chromosome per plot
+
+\end{enumerate}
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{cnvPlot}\PYG{p}{(}\PYG{n}{config}\PYG{p}{,} \PYG{n}{imgType}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{yMin}\PYG{o}{=} \PYG{p}{,} \PYG{n}{yMax}\PYG{o}{=} \PYG{p}{)}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+function parameters are:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{config} \sphinxhyphen{} configuration file defined under \sphinxstylestrong{User Input} section
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{imgType} \sphinxhyphen{}  image extention to use; available options are: \sphinxtitleref{png}, \sphinxtitleref{jpeg}, \sphinxtitleref{svg}, and \sphinxtitleref{pdf}; default to \sphinxtitleref{png}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{yMin} \sphinxhyphen{} y\sphinxhyphen{}axis bottom limit; default to \sphinxtitleref{\sphinxhyphen{}5}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{yMax} \sphinxhyphen{} y\sphinxhyphen{}axis upper limit; default to \sphinxtitleref{5}
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+output images are stored inside the \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq/tool/output/name\_defined\_in\_output\_path\_of\_config/images} directory
+
+\item {} 
+\sphinxAtStartPar
+it is recommended to inspect the CNV\sphinxhyphen{}plots with default y\sphinxhyphen{}limits and then modify
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{cnvPlotting} can be used in two ways: with default values or user\sphinxhyphen{}defined values
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+with default values, the parameters can be omitted and set to \sphinxtitleref{imgType=”png”}, \sphinxtitleref{yMin=\sphinxhyphen{}5} and \sphinxtitleref{yMax=5}
+
+\item {} 
+\sphinxAtStartPar
+the following two commands have the same parameter values and will output the same plots:
+
+\end{itemize}
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{cnvPlot}\PYG{p}{(}\PYG{n}{config}\PYG{p}{)}
+\PYG{n}{cnvPlot}\PYG{p}{(}\PYG{n}{config}\PYG{p}{,} \PYG{n}{imgType}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{png}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{yMin}\PYG{o}{=}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{yMax}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+
+\subsubsection{6 \sphinxhyphen{} Plotting a Zoomed\sphinxhyphen{}In Region of One Chromosome}
+\label{\detokenize{index:plotting-a-zoomed-in-region-of-one-chromosome}}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+function to plot a specific zoomed\sphinxhyphen{}in region of one chromosome
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{cnvPlotZoom}\PYG{p}{(}\PYG{n}{config}\PYG{p}{,} \PYG{n}{tabFile}\PYG{p}{,} \PYG{n}{chromosome}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{n}{start}\PYG{o}{=} \PYG{p}{,} \PYG{n}{end}\PYG{o}{=} \PYG{p}{,} \PYG{n}{yMin}\PYG{o}{=} \PYG{p}{,} \PYG{n}{yMax}\PYG{o}{=} \PYG{p}{,} \PYG{n}{imgType}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+function parameters are:
+\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{config} \sphinxhyphen{} configuration file defined under \sphinxstylestrong{User Input} section
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{tabFile} \sphinxhyphen{}  tabulated file containing all hits; requires user\sphinxhyphen{}input to define path to all\sphinxhyphen{}hits tabulated file
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{chromosome} \sphinxhyphen{} chromosome name to focus on; default to \sphinxtitleref{NA}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{start} \sphinxhyphen{} start of window in bp; both scientific notation is accepted: \sphinxtitleref{100000} or \sphinxtitleref{10e4}; defaults to \sphinxtitleref{NA}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{end} \sphinxhyphen{} end of window in bp; the same applies as in the \sphinxtitleref{start} parameter; defaults to NA
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{yMin} \sphinxhyphen{} y\sphinxhyphen{}axis bottom limit; default to \sphinxtitleref{\sphinxhyphen{}5}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{yMax} \sphinxhyphen{} y\sphinxhyphen{}axis upper limit; default to \sphinxtitleref{5}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxtitleref{imgType} \sphinxhyphen{}  image extention to use; available options are: \sphinxtitleref{png}, \sphinxtitleref{jpeg}, \sphinxtitleref{svg}, and \sphinxtitleref{pdf}; defaults to \sphinxtitleref{png}
+
+\end{itemize}
+
+\item {} 
+\sphinxAtStartPar
+requires path definition of \sphinxtitleref{tabFile} parameter in the cell:
+
+\end{itemize}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{tabFile} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZhy{}} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{output/run\PYGZhy{}name/tab\PYGZhy{}files/tab\PYGZhy{}file.tab}\PYG{l+s+s2}{\PYGZdq{}}
+\end{sphinxVerbatim}
 
 
 \section{References}
@@ -589,7 +950,7 @@ To run a cell, click on the corresponding cell and press \sphinxstylestrong{Ctrl
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
-CNV\sphinxhyphen{}seq, a new method to detect copy number variation using high\sphinxhyphen{}throughput sequencing {[}\sphinxhref{https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-80}{LINK}{]}
+\sphinxhref{https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-80}{CNV\sphinxhyphen{}seq, a new method to detect copy number variation using high\sphinxhyphen{}throughput sequencing}
 
 \end{itemize}
 
@@ -606,7 +967,11 @@ CNV\sphinxhyphen{}seq, a new method to detect copy number variation using high\s
 
 \item {} 
 \sphinxAtStartPar
-\sphinxhref{https://github.com/amora197/copy-number-analysis}{amora197/copy\sphinxhyphen{}number\sphinxhyphen{}analysis}
+\sphinxhref{https://github.com/pbgl/pbgl-cnvseq}{pbgl/pbgl\sphinxhyphen{}cnvseq}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://github.com/amora197/pbgl-cnvseq}{amora197/pbgl\sphinxhyphen{}cnvseq}
 
 \end{itemize}
 
