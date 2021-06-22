@@ -78,14 +78,18 @@ latex_toplevel_sectioning = 'section'
 
 # Configuration of Title Page
 latex_maketitle = r'''
-        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page
+        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page        
         \begin{titlepage}
             \vspace*{10mm} %%% * is used to give space from top
             \flushright\textbf{\Huge {PBGL CNV-seq Analysis v1.0\\}}
             \vspace{0mm} %%% * is used to give space from top
-            \textbf{\Large {A Laboratory Manual\\}}
+            \textbf{\Large {A Training Tutorial\\}}
+            \vspace{0mm} %%% * is used to give space from top
+            \textbf{\Large {[DRAFT]\\}}
             \vspace{50mm}
             \textbf{\Large {Anibal E. Morales-Zambrana\\}}
+            \vspace{00mm}
+            \textbf{\Large {Norman Warthmann\\}}
             \vspace{10mm}
             \textbf{\Large {Plant Breeding and Genetics Laboratory\\}}
             \vspace{0mm}
@@ -95,7 +99,7 @@ latex_maketitle = r'''
 	    \vspace{10mm}
             \normalsize Created: March, 2021\\
             \vspace*{0mm}
-            \normalsize  Last updated: 04 June 2021
+            \normalsize  Last updated: 21 June 2021
             %% \vfill adds at the bottom
             \vfill
             \small\flushleft {{\textbf {Please note:}} \textit {This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views

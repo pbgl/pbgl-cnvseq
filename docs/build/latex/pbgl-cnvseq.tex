@@ -73,7 +73,7 @@
 
 
 \title{pbgl\sphinxhyphen{}cnvseq}
-\date{Jun 21, 2021}
+\date{Jun 22, 2021}
 \release{1.0}
 \author{Anibal Morales, IAEA PBGL \sphinxhyphen{} UN FAO}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -83,14 +83,18 @@
 
 \pagestyle{empty}
 
-        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page
+        \pagenumbering{Roman} %%% to avoid page 1 conflict with actual page        
         \begin{titlepage}
             \vspace*{10mm} %%% * is used to give space from top
             \flushright\textbf{\Huge {PBGL CNV-seq Analysis v1.0\\}}
             \vspace{0mm} %%% * is used to give space from top
-            \textbf{\Large {A Laboratory Manual\\}}
+            \textbf{\Large {A Training Tutorial\\}}
+            \vspace{0mm} %%% * is used to give space from top
+            \textbf{\Large {[DRAFT]\\}}
             \vspace{50mm}
             \textbf{\Large {Anibal E. Morales-Zambrana\\}}
+            \vspace{00mm}
+            \textbf{\Large {Norman Warthmann\\}}
             \vspace{10mm}
             \textbf{\Large {Plant Breeding and Genetics Laboratory\\}}
             \vspace{0mm}
@@ -100,7 +104,7 @@
 	    \vspace{10mm}
             \normalsize Created: March, 2021\\
             \vspace*{0mm}
-            \normalsize  Last updated: 04 June 2021
+            \normalsize  Last updated: 21 June 2021
             %% \vfill adds at the bottom
             \vfill
             \small\flushleft {{\textbf {Please note:}} \textit {This is not an official IAEA publication but is made available as working material. The material has not undergone an official review by the IAEA. The views
@@ -223,7 +227,7 @@ The cloning process will depict the following:
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar
-The \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq} repository should have been clones successfully. Verify that the download is complete by listing the folders/files in the directory.
+The \sphinxstylestrong{pbgl\sphinxhyphen{}cnvseq} repository should have been cloned successfully. Verify that the download is complete by listing the folders/files in the directory.
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYGZdl{} ls \PYGZhy{}l
@@ -281,10 +285,7 @@ IRkernel
 \end{itemize}
 
 \sphinxAtStartPar
-The necessary R packages are installed through the Jupyter Notebook. It proves as a faster and error\sphinxhyphen{}free way to install \sphinxstylestrong{configr}, \sphinxstylestrong{ggplot2}, \sphinxstylestrong{Biocmanager}, \sphinxstylestrong{Bioconductor\sphinxhyphen{}GenomicAlignments}, and \sphinxstylestrong{Bioconductor\sphinxhyphen{}GenomeInfoDb} packages.
-
-\sphinxAtStartPar
-There are two ways to install the rest of the necessary libraries to run CNV\sphinxhyphen{}seq: automatically or manually.
+There are two ways to create the \sphinxstylestrong{cnvseq} virtual environment and install the necessary libraries to run CNVseq: automatically or manually.
 
 
 \subsubsection{Automatically (faster)}
@@ -1229,7 +1230,7 @@ In [ ]:  \PYGZsh{} install necessary libraries using R functions
 Run the \sphinxstylestrong{User Input} section after correctly editing the name/path of the configuration file:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{configPath} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZhy{}} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{config/config\PYGZhy{}CNVseq.yml}\PYG{l+s+s2}{\PYGZdq{}}
+\PYG{n}{In} \PYG{p}{[} \PYG{p}{]}\PYG{p}{:} \PYG{n}{configPath} \PYG{o}{\PYGZlt{}}\PYG{o}{\PYGZhy{}} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{config/config\PYGZhy{}CNVseq\PYGZhy{}PBGL\PYGZhy{}sorghum\PYGZhy{}analysis\PYGZhy{}example.yml}\PYG{l+s+s2}{\PYGZdq{}}
 \end{sphinxVerbatim}
 
 \sphinxAtStartPar

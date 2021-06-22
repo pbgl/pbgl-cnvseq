@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.3)  21 JUN 2021 14:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.12.3)  22 JUN 2021 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1164,16 +1164,16 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 106.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 110.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+phv on input line 113.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 117.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 113.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 117.
 
 (./pbgl-cnvseq.toc<<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
@@ -1190,20 +1190,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout6 = `pbgl-cnvseq.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 119.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 123.
  [1
 
 ] [2
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 138.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 142.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 143.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 148.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 147.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 152.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -1212,59 +1212,59 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 <terminal_base_env.png, id=158, 944.52875pt x 459.7175pt>
 File: terminal_base_env.png Graphic file (type png)
 <use terminal_base_env.png>
-Package pdftex.def Info: terminal_base_env.png  used on input line 167.
+Package pdftex.def Info: terminal_base_env.png  used on input line 171.
 (pdftex.def)             Requested size: 469.75546pt x 228.63762pt.
 <terminal_base_env_detail.png, id=160, 359.3425pt x 76.285pt>
 File: terminal_base_env_detail.png Graphic file (type png)
 <use terminal_base_env_detail.png>
-Package pdftex.def Info: terminal_base_env_detail.png  used on input line 173.
+Package pdftex.def Info: terminal_base_env_detail.png  used on input line 177.
 (pdftex.def)             Requested size: 359.34161pt x 76.2848pt.
  [3
 
  <./terminal_base_env.png> <./terminal_base_env_detail.png>]
-LaTeX Font Info:    Try loading font information for TS1+pcr on input line 216.
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 220.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 ) [4] [5]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 437.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 438.
  [6
 
 ] [7]
 [8] [9]
-Overfull \hbox (3.85034pt too wide) in paragraph at lines 804--806
+Overfull \hbox (3.85034pt too wide) in paragraph at lines 805--807
 []\T1/ptm/m/n/10 out-put tab-u-lated files are stored in-side \T1/ptm/b/n/10 pb
 gl-cnvseq/tool/output/name_defined_in_output_path_of_config/tab-
  []
 
 
-Overfull \hbox (3.49036pt too wide) in paragraph at lines 856--858
+Overfull \hbox (3.49036pt too wide) in paragraph at lines 857--859
 []\T1/ptm/m/n/10 out-put im-ages are stored in-side the \T1/ptm/b/n/10 pbgl-cnv
 seq/tool/output/name_defined_in_output_path_of_config/images
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 995--997
+Underfull \hbox (badness 10000) in paragraph at lines 996--998
 [][][]$\T1/ptm/m/n/10 https : / / bss1innov1nafa1poc1 . blob . core . windows .
  net / sample-[]container / 2021 _ Training / con-[]2 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 999--1001
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1002
 [][][]$\T1/ptm/m/n/10 https : / / bss1innov1nafa1poc1 . blob . core . windows .
  net / sample-[]container / 2021 _ Training / con-[]2 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1011
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1012
 [][][]$\T1/ptm/m/n/10 https : / / bss1innov1nafa1poc1 . blob . core . windows .
  net / sample-[]container / 2021 _ Training / D2-[]1 _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1013--1015
+Underfull \hbox (badness 10000) in paragraph at lines 1014--1016
 [][][]$\T1/ptm/m/n/10 https : / / bss1innov1nafa1poc1 . blob . core . windows .
  net / sample-[]container / 2021 _ Training / D2-[]1 _
  []
@@ -1273,21 +1273,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 1013--1015
 
 ] [13] [14] [15]
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 1288.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 1289.
 
-Overfull \vbox (7.5258pt too high) detected at line 1322
+Overfull \vbox (7.5258pt too high) detected at line 1323
  []
 
 [16]
 <all-hits-tab-file.png, id=252, 872.25874pt x 741.77126pt>
 File: all-hits-tab-file.png Graphic file (type png)
 <use all-hits-tab-file.png>
-Package pdftex.def Info: all-hits-tab-file.png  used on input line 1344.
+Package pdftex.def Info: all-hits-tab-file.png  used on input line 1345.
 (pdftex.def)             Requested size: 469.74829pt x 399.48657pt.
 <cnvs-tab-file.png, id=253, 872.25874pt x 741.77126pt>
 File: cnvs-tab-file.png Graphic file (type png)
 <use cnvs-tab-file.png>
-Package pdftex.def Info: cnvs-tab-file.png  used on input line 1351.
+Package pdftex.def Info: cnvs-tab-file.png  used on input line 1352.
 (pdftex.def)             Requested size: 469.74829pt x 399.48657pt.
 <con-2_s1-vs-D2-1_S7-chromosome-all-window-10000.png, id=254, 481.8pt x 481.8pt
 >
@@ -1295,7 +1295,7 @@ File: con-2_s1-vs-D2-1_S7-chromosome-all-window-10000.png Graphic file (type pn
 g)
 <use con-2_s1-vs-D2-1_S7-chromosome-all-window-10000.png>
 Package pdftex.def Info: con-2_s1-vs-D2-1_S7-chromosome-all-window-10000.png  u
-sed on input line 1389.
+sed on input line 1390.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 <con-2_s1-vs-D2-1_S7-chromosome-Chr04-window-10000.png, id=255, 481.8pt x 481.8
 pt>
@@ -1303,7 +1303,7 @@ File: con-2_s1-vs-D2-1_S7-chromosome-Chr04-window-10000.png Graphic file (type
 png)
 <use con-2_s1-vs-D2-1_S7-chromosome-Chr04-window-10000.png>
 Package pdftex.def Info: con-2_s1-vs-D2-1_S7-chromosome-Chr04-window-10000.png 
- used on input line 1396.
+ used on input line 1397.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 <con-2_s1-vs-D2-1_S7-chromosome-Chr05-window-10000.png, id=256, 481.8pt x 481.8
 pt>
@@ -1311,7 +1311,7 @@ File: con-2_s1-vs-D2-1_S7-chromosome-Chr05-window-10000.png Graphic file (type
 png)
 <use con-2_s1-vs-D2-1_S7-chromosome-Chr05-window-10000.png>
 Package pdftex.def Info: con-2_s1-vs-D2-1_S7-chromosome-Chr05-window-10000.png 
- used on input line 1403.
+ used on input line 1404.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
 <con-2_s1-vs-D2-1_S7-chromosome-Chr09-window-10000.png, id=257, 481.8pt x 481.8
 pt>
@@ -1319,7 +1319,7 @@ File: con-2_s1-vs-D2-1_S7-chromosome-Chr09-window-10000.png Graphic file (type
 png)
 <use con-2_s1-vs-D2-1_S7-chromosome-Chr09-window-10000.png>
 Package pdftex.def Info: con-2_s1-vs-D2-1_S7-chromosome-Chr09-window-10000.png 
- used on input line 1410.
+ used on input line 1411.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
  [17] [18 <./all-hits-tab-file.png>] [19 <./cnvs-tab-file.png>] [20 <./con-2_s1
 -vs-D2-1_S7-chromosome-all-window-10000.png (PNG copy)>] [21 <./con-2_s1-vs-D2-
@@ -1332,23 +1332,23 @@ File: con-2_s1-vs-D2-1_S7-window-10000-chromosome-Chr09-zoomed.png Graphic file
  (type png)
 <use con-2_s1-vs-D2-1_S7-window-10000-chromosome-Chr09-zoomed.png>
 Package pdftex.def Info: con-2_s1-vs-D2-1_S7-window-10000-chromosome-Chr09-zoom
-ed.png  used on input line 1466.
+ed.png  used on input line 1467.
 (pdftex.def)             Requested size: 469.77148pt x 469.77148pt.
  [24] [25 <./con-2_s1-vs-D2-1_S7-window-10000-chromosome-Chr09-zoomed.png (PNG 
 copy)>] (./pbgl-cnvseq.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1512.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1513.
 
 [26
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1512.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1513.
  (./pbgl-cnvseq.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1512.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1512.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1513.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1513.
 
 Package rerunfilecheck Info: File `pbgl-cnvseq.out' has not changed.
 (rerunfilecheck)             Checksum: B830113FECE7E63C0927C1CA705DD63F;5092.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1512.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1513.
  ) 
 Here is how much of TeX's memory you used:
  13970 strings out of 492982
@@ -1367,7 +1367,7 @@ ro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on pbgl-cnvseq.pdf (27 pages, 632986 bytes).
+Output written on pbgl-cnvseq.pdf (27 pages, 633261 bytes).
 PDF statistics:
  367 PDF objects out of 1000 (max. 8388607)
  307 compressed objects within 4 object streams

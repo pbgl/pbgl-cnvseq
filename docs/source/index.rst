@@ -94,7 +94,7 @@ The cloning process will depict the following:
    Receiving objects: 100% (628/628), 11.79 MiB | 7.03 MiB/s, done.
    Resolving deltas: 100% (190/190), done.
    
-The **pbgl-cnvseq** repository should have been clones successfully. Verify that the download is complete by listing the folders/files in the directory.
+The **pbgl-cnvseq** repository should have been cloned successfully. Verify that the download is complete by listing the folders/files in the directory.
 
 ::
 
@@ -121,9 +121,7 @@ CNVseq has multiple dependencies, listed below:
 
   -  IRkernel
 
-The necessary R packages are installed through the Jupyter Notebook. It proves as a faster and error-free way to install **configr**, **ggplot2**, **Biocmanager**, **Bioconductor-GenomicAlignments**, and **Bioconductor-GenomeInfoDb** packages.
-
-There are two ways to install the rest of the necessary libraries to run CNV-seq: automatically or manually.
+There are two ways to create the **cnvseq** virtual environment and install the necessary libraries to run CNVseq: automatically or manually.
 
 Automatically (faster)
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -689,7 +687,7 @@ Run the **User Input** section after correctly editing the name/path of the conf
 
 ::
 
-   In [ ]: configPath <- "config/config-CNVseq.yml"
+   In [ ]: configPath <- "config/config-CNVseq-PBGL-sorghum-analysis-example.yml"
    
 Load the contents of the configuration file by running the cell,
 

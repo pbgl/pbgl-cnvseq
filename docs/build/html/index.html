@@ -262,7 +262,7 @@ $ conda upgrade --all
 <span class="n">Resolving</span> <span class="n">deltas</span><span class="p">:</span> <span class="mi">100</span><span class="o">%</span> <span class="p">(</span><span class="mi">190</span><span class="o">/</span><span class="mi">190</span><span class="p">),</span> <span class="n">done</span><span class="o">.</span>
 </pre></div>
 </div>
-<p>The <strong>pbgl-cnvseq</strong> repository should have been clones successfully. Verify that the download is complete by listing the folders/files in the directory.</p>
+<p>The <strong>pbgl-cnvseq</strong> repository should have been cloned successfully. Verify that the download is complete by listing the folders/files in the directory.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l
 </pre></div>
 </div>
@@ -288,8 +288,7 @@ $ conda upgrade --all
 </ul>
 </li>
 </ul>
-<p>The necessary R packages are installed through the Jupyter Notebook. It proves as a faster and error-free way to install <strong>configr</strong>, <strong>ggplot2</strong>, <strong>Biocmanager</strong>, <strong>Bioconductor-GenomicAlignments</strong>, and <strong>Bioconductor-GenomeInfoDb</strong> packages.</p>
-<p>There are two ways to install the rest of the necessary libraries to run CNV-seq: automatically or manually.</p>
+<p>There are two ways to create the <strong>cnvseq</strong> virtual environment and install the necessary libraries to run CNVseq: automatically or manually.</p>
 <div class="section" id="automatically-faster">
 <h4>Automatically (faster)<a class="headerlink" href="#automatically-faster" title="Permalink to this headline">¶</a></h4>
 <p>One YAML file, <strong>environment.yml</strong>, is provided to automatically create a virtual environment and install the dependent libraries through mamba. The file creates the <strong>cnvseq</strong> virtual environment, along R, Jupyter Notebook, and the R-kernel in Jupyter. It also installs the dependent R libraries. Run <strong>environment.yml</strong>:</p>
@@ -839,7 +838,7 @@ $ conda activate cnvseq
 </pre></div>
 </div>
 <p>Run the <strong>User Input</strong> section after correctly editing the name/path of the configuration file:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span> <span class="p">]:</span> <span class="n">configPath</span> <span class="o">&lt;-</span> <span class="s2">&quot;config/config-CNVseq.yml&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span> <span class="p">]:</span> <span class="n">configPath</span> <span class="o">&lt;-</span> <span class="s2">&quot;config/config-CNVseq-PBGL-sorghum-analysis-example.yml&quot;</span>
 </pre></div>
 </div>
 <p>Load the contents of the configuration file by running the cell,</p>

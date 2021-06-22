@@ -1,10 +1,10 @@
 # Fdb version 3
-["makeindex copy-number-analysis.idx"] 1616581235 "copy-number-analysis.idx" "copy-number-analysis.ind" "copy-number-analysis" 1624280035
+["makeindex copy-number-analysis.idx"] 1616581235 "copy-number-analysis.idx" "copy-number-analysis.ind" "copy-number-analysis" 1624355277
   "copy-number-analysis.idx" 1624266143 0 d41d8cd98f00b204e9800998ecf8427e ""
   (generated)
   "copy-number-analysis.ilg"
   "copy-number-analysis.ind"
-["pdflatex"] 1624266143 "copy-number-analysis.tex" "copy-number-analysis.pdf" "copy-number-analysis" 1624280035
+["pdflatex"] 1624266143 "copy-number-analysis.tex" "copy-number-analysis.pdf" "copy-number-analysis" 1624355277
   "/etc/texmf/web2c/texmf.cnf" 1606984411 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -151,16 +151,16 @@
   "copy-number-analysis.toc" 1624266143 1798 991e7c2595ac8e2eb4f161ce0f1f6e90 ""
   "footnotehyper-sphinx.sty" 1623745624 13076 494d8d655f805dc10b53008469c289a2 ""
   "sphinx.sty" 1623745624 91458 532cd893425be1ee8212ce283449999c ""
-  "sphinxhighlight.sty" 1624280035 6607 9139c967ef186821cb11bb3b0580e00e ""
+  "sphinxhighlight.sty" 1624355276 6607 9139c967ef186821cb11bb3b0580e00e ""
   "sphinxhowto.cls" 1623745624 3251 61ceeeffc44f983928ef03a3834a8b58 ""
-  "sphinxmessages.sty" 1624280035 745 3f5fcd6cdd7964ed608767954a8ced6f ""
+  "sphinxmessages.sty" 1624355276 745 3f5fcd6cdd7964ed608767954a8ced6f ""
   "sphinxmulticell.sty" 1623745624 14606 0b6edc2b1a83546ed92026d1f6a311b5 ""
   "terminal_base_env.png" 1624007327 12410 a57cb2bd903fe8c514f13505af7c70f5 ""
   "terminal_base_env_detail.png" 1624007359 8319 f2f2f4cb40c5e04416e4c36180198cfb ""
   (generated)
-  "copy-number-analysis.pdf"
-  "copy-number-analysis.aux"
-  "copy-number-analysis.idx"
   "copy-number-analysis.log"
+  "copy-number-analysis.aux"
+  "copy-number-analysis.pdf"
   "copy-number-analysis.toc"
   "copy-number-analysis.out"
+  "copy-number-analysis.idx"
