@@ -5,7 +5,7 @@ This repository was forked from <a href="https://github.com/Bioconductor/copy-nu
 
 Newer documentation on running the CNV-seq Jupyter Notebook can be found clicking on the hyperlink below:
 
-* <a href="https://copy-number-analysis.readthedocs.io/en/latest/">Read-the-Docs of PBGL's CNV-seq Analysis</a>
+* <a href="https://pbgl-cnvseq.readthedocs.io/en/latest/">Read-the-Docs of PBGL's CNV-seq Analysis</a>
 
 Original Documentation from Bioconductor
 =================================
