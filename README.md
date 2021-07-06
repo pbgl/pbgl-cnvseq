@@ -1,67 +1,17 @@
-Documentation by PBGL
-=========================
+PBGL - CNVseq
+==============
 
-This repository was forked from <a href="https://github.com/Bioconductor/copy-number-analysis">Bioconductor's copy-number-analysis</a> and edited accordingly to meet PBGL's needs by adding Jupyter Notebook functionalities. Its original documentation can be found in the section "Original Documentation from Bioconductor" below.
+This repository provides a reproducible copy-number-analysis tool through the use of Jupyter Notebooks to detect copy number variations (CNVs). The methods used to calculate the CNVs are described in this paper:
 
-Newer documentation on running the CNV-seq Jupyter Notebook can be found clicking on the hyperlink below:
+* <a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-10-80">CNV-seq, a new method to detect copy number variation using high-throughput sequencing</a>
+
+The original functions inside **pbgl-cnvseq/tool/helper-functions/cnvHLiang.R** were downloaded from <a href="https://github.com/hliang/cnv-seq">hliang/cnv-seq</a> Github repository.
+
+
+Helper functions under the **Bioconductor Helper Functions** section inside the file **pbgl-cnvseq/tool/helper-functions/RCNV_seq-helper.R** were taken from <a href="https://github.com/Bioconductor/copy-number-analysis">Bioconductor's copy-number-analysis</a> Github repository.
+
+Additional helper functions developed by PBGL can also be found under the **Bioconductor Helper Functions** section inside the file **pbgl-cnvseq/tool/helper-functions/RCNV_seq-helper.R**.
+
+PBGL documentation on running the CNV-seq Jupyter Notebook can be found clicking on the hyperlink below:
 
 * <a href="https://pbgl-cnvseq.readthedocs.io/en/latest/">Read-the-Docs of PBGL's CNV-seq Analysis</a>
-
-Original Documentation from Bioconductor
-=================================
-
-Copy Number Analysis 
----------------------------------
-
-Explore, compare, and evaluate Bioconductor packages related to genomic copy number analysis
-
-Genomic amplifications and deletions are found in most (all?) tumor genomes.  A common practice today is to do low coverage DNA sequencing (0.5x, for instance) of a tumor genome, and a matched normal genome (from the same subject).  Judicious comparison of the the two sequence genomes illuminates structural changes in the tumor.
-
-Copy number changes in tumors vary from broad (an entire chromosome arm) to focal (i.e., a 10kb amplification, loss of heterozygosity or gain).   Detection methods should be sensitive enough to detect these very different phenomena in noisy low-coverage data.
-
-Our purpose here is to provide
-
-* A tumor/normal single chromosome pair of bam files (with accompanying index files)
-* A reference analysis, using the popular SeqSeg matlab program from the Broad Institute
-* A tutorial on the exploratory data analysis of these files using "native" Bioconductor capabilities
-* Demonstrate (and evaluate) the capabilities of many of the Bioconductor copy number analysis packages
-
-List of Tools used
---------------------------
-Bioconductor Packages
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CountOverlaps-method-from-IRanges-Package">countOverlaps</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/cn.mops">cn.mops</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNAnorm">CNAnorm</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/seqCNA">seqCNA</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/HMMcopy">HMMcopy</a>  
-* <a href ="https://github.com/Bioconductor/copy-number-analysis/wiki/TitanCNA">TitanCNA</a>
-<br>
-
-Non Biocondcutor packages
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNV-seq">CNV-seq</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/SegSeq">Seg-seq</a>
-
-
-Literature Resources
---------------------------------
-* Alkan, C., et al. (2011). <a href="http://www.ncbi.nlm.nih.gov/pubmed/21358748">"Genome structural variation discovery and genotyping."</a> Nat Rev Genet 12(5): 363-376. 
-* Duan J, Zhang J-G, Deng H-W, Wang Y-P (2013) <a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0059128">Comparative Studies of Copy Number Variation Detection Methods for Next-Generation Sequencing Technologies.</a> PLoS ONE 8(3): e59128. doi:10.1371/journal.pone.0059128
-
-Sample Data
---------------------
-* http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam
-* http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai
-* http://s3.amazonaws.com/copy-number-analysis/normalA.chr4.bam
-* http://s3.amazonaws.com/copy-number-analysis/normalA.chr4.bam.bai
-
-Use, e.g.,
-<pre><code> 
-download.file(url="http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai",
-              destfile="tumorA.chr4.bam.bai")
-</code></pre>
-
-
-Exploratory Data Analysis
-----------------------------------------
-We have done some primary <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/Exploratory-Data-Analysis">Exploratory Data Analysis</a> on the Normal and Tumor Sample Datasets.
-
