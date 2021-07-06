@@ -10,7 +10,7 @@ The original functions inside **pbgl-cnvseq/tool/helper-functions/cnvHLiang.R** 
 
 Helper functions under the **Bioconductor Helper Functions** section inside the file **pbgl-cnvseq/tool/helper-functions/RCNV_seq-helper.R** were taken from <a href="https://github.com/Bioconductor/copy-number-analysis">Bioconductor's copy-number-analysis</a> Github repository.
 
-Additional helper functions developed by PBGL can also be found under the **Bioconductor Helper Functions** section inside the file **pbgl-cnvseq/tool/helper-functions/RCNV_seq-helper.R**.
+Additional helper functions developed by PBGL can also be found under the **PBGL Helper Functions** section inside the file **pbgl-cnvseq/tool/helper-functions/RCNV_seq-helper.R**.
 
 PBGL documentation on running the CNV-seq Jupyter Notebook can be found clicking on the hyperlink below:
 
